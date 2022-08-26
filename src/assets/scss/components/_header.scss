@@ -1,0 +1,361 @@
+.header {
+  position: relative;
+  padding: 40px 0;
+  z-index: 2;
+
+  @include r(1200) {
+    padding: 30px 0;
+  }
+
+  @include r(768) {
+    padding: 20px 0;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+
+    @include r(768) {
+      gap: 18px;
+    }
+  }
+
+  &-burger {
+    &__icon {
+      fill: $dark;
+      @include ease;
+
+      @include r(1200) {
+        width: 22px;
+        height: 15px;
+      }
+    }
+
+
+    &:hover {
+      .header-burger__icon {
+        opacity: .8;
+      }
+    }
+
+  }
+
+  &-buttons {
+    display: flex;
+    gap: 30px;
+
+    @include r(768) {
+      gap: 12px;
+
+      .button {
+        width: 46px;
+        height: 46px;
+        padding: 0;
+
+        span {
+          display: none;
+        }
+
+        svg {
+          margin-right: 0;
+          max-height: 16px;
+        }
+
+        &:first-child {
+          svg {
+            width: 19px;
+            height: 12px;
+          }
+        }
+
+        &:last-child {
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  &-geo {
+    font-family: $t-Regular;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    color: #888888;
+
+    @include r(1200) {
+      font-size: 12px;
+    }
+
+    @include r(768) {
+      display: none;
+    }
+  }
+
+  &-logo {
+    display: block;
+    margin-top: -10px;
+
+    &:hover {
+      svg {
+        fill: $dark;
+      }
+    }
+
+    svg {
+      fill: $red;
+      @include ease;
+
+      @include r(1200) {
+        width: 123px;
+        height: 34px;
+      }
+
+      @include r(768) {
+        width: 114px;
+        height: 32px;
+      }
+    }
+  }
+
+  &-tel {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    color: #888888;
+    font-size: 14px;
+
+    @include r(1200) {
+      display: none;
+    }
+
+    &__link {
+      font-family: $t-Bold;
+      font-size: 20px;
+      color: $dark;
+      &:hover {
+        color: $red;
+      }
+    }
+
+    span {
+      font-family: $t-Regular;
+
+      &::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-color: #58E076;
+        display: inline-block;
+
+        border-radius: 50%;
+        margin-right: 7px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: -100%;
+  background: rgba(51, 51, 51, 0.5);
+  z-index: 100;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  @include ease-long;
+
+  .container {
+    @include r(1200) {
+      padding: 0;
+    }
+  }
+
+  &--active {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__in {
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    padding: 46px 0 67px 40px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    overflow: hidden;
+
+    @include r(768) {
+      padding: 40px 40px 50px;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    left: 40px;
+    top: 46px;
+    color: #D0D0D0;
+
+    @include ease-long;
+
+    @include r(768) {
+      position: static;
+      margin-bottom: 30px;
+    }
+
+    svg,
+    span {
+      fill: #D0D0D0;
+      @include ease-long;
+    }
+
+    &:hover {
+      span {
+        color: $dark;
+      }
+      svg {
+        fill: $dark;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 436px;
+    margin: auto;
+    padding-top: 5px;
+
+    @include r(768) {
+      max-width: unset;
+    }
+  }
+
+  &__list {
+    margin-top: 26px;
+
+    @include r(1200) {
+      margin-top: 18px;
+    }
+  }
+
+  &__link {
+    color: #9f9f9f;
+    font-family: $n-Bold;
+    font-size: 28px;
+
+    @include r(768) {
+      font-size: 21px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+
+      @include r(1200) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &-tel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    color: #888888;
+    font-size: 14px;
+
+    @include r(1200) {
+      gap: 10px;
+    }
+
+    &__wrapper {
+      position: relative;
+      margin: 35px auto;
+      padding: 22px 10px;
+
+      @include r(1200) {
+        padding: 15px 10px;
+      }
+
+      &::before {
+        @include ovl;
+        background-color: #F8F8F8;
+        width: 2500px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__link {
+      font-family: $t-Bold;
+      font-size: 20px;
+      color: $dark;
+      &:hover {
+        color: $red;
+      }
+    }
+
+    span {
+      font-family: $t-Regular;
+
+      &::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-color: #58E076;
+        display: inline-block;
+
+        border-radius: 50%;
+        margin-right: 7px;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+
+    @include r(768) {
+      gap: 18px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 25px;
+      row-gap: 25px;
+    }
+
+    .button {
+      @include r(768) {
+        &:last-child {
+          grid-column: 1/3;
+        }
+      }
+      svg {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  .button {
+    font-size: 14px;
+  }
+}

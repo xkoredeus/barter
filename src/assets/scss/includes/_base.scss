@@ -1,0 +1,85 @@
+@import "mixins";
+@import "fonts";
+@import "common/fonts";
+@import "common/colors";
+@import "common/one-classes";
+@import "common/selections";
+@import "common/states";
+@import "common/inputs";
+@import "common/buttons";
+@import "common/checkbox";
+@import "common/section";
+@import "common/swiper-custom";
+
+html, body {
+  position: relative;
+  font-family: $t-Medium, Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $dark;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+
+  @include r(1200) {
+    font-size: 14px;
+  }
+
+  &.fixed {
+    overflow: hidden;
+    padding-right: 15px;
+  }
+}
+
+.svg-sprite {
+  position: absolute;
+  bottom: 0;
+}
+
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.layout {
+  overflow: hidden;
+
+  &__in {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@include rmin(768) {
+  .container {
+    max-width: unset;
+  }
+}
+
+@include r(1200) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@include rmin(576) {
+  .container {
+    max-width: unset;
+  }
+}
+
+@include r(576) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@include rmin(1200) {
+  .container {
+    max-width: 1140px;
+  }
+}

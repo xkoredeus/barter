@@ -1,0 +1,118 @@
+button {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: $tr;
+  padding: 0;
+}
+
+.button {
+  position: relative;
+  font-family: $t-Medium;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 19px 24px;
+  border: none;
+  border-radius: 16px;
+  @include ease;
+
+  @include r(1200) {
+    padding: 16px 20px;
+    border-radius: 12px;
+  }
+
+  & svg {
+    margin-right: 11px;
+  }
+
+  &--primary {
+    color: $white;
+    background-color: $red;
+
+    & svg {
+      fill: $white;
+    }
+
+    &:hover {
+      color: $white !important;
+      background-color: $darkRed;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $lightRed;
+    }
+  }
+
+  &--secondary {
+    color: $dark !important;
+    background-color: $gray;
+
+    & svg {
+      fill: $dark;
+    }
+
+    &:hover {
+      background-color: $darkGray;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $lightGray;
+    }
+  }
+
+  &--thirdary {
+    color: $dark !important;
+    background-color: $white;
+
+    &:hover {
+      background-color: #F5F5F5;
+    }
+
+    &:active,
+    &:focus {
+      background: #FFFFFF;
+      box-shadow: 0 13px 22px rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &--dark {
+    color: $white !important;
+    background-color: $dark;
+
+    svg {
+      fill: $white;
+    }
+
+    &:hover {
+      background-color: #636262;
+    }
+  }
+
+  &--yellow {
+    color: $dark;
+    background-color: #F9EAB8;
+
+    svg {
+      fill: $dark;
+    }
+
+    &:hover {
+      color: $dark;
+      background-color: #E3D5A4;
+    }
+
+    &:active,
+    &:focus {
+      color: $dark;
+      background: #FFF2C6;
+      box-shadow: 0px 13px 15px rgba(249, 234, 184, 0.15);
+    }
+
+  }
+}

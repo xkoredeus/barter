@@ -1,0 +1,47 @@
+$t-Light: 'TTFirsNeue-Light';
+$t-Regular: 'TTFirsNeue-Regular';
+$t-ExtraLight: 'TTFirsNeue-ExtraLight';
+$t-DemiBold: 'TTFirsNeue-DemiBold';
+$t-Bold: 'TTFirsNeue-Bold';
+$t-ExtraBold: 'TTFirsNeue-ExtraBold';
+$t-Medium: 'TTFirsNeue-Medium';
+$t-Thin: 'TTFirsNeue-Thin';
+$t-Black: 'TTFirsNeue-Black';
+$t-Italic: 'TTFirsNeue-Italic';
+$n-Ultralight: 'NeueMachina-Ultralight';
+$n-Light: 'NeueMachina-Light';
+$n-Black: 'NeueMachina-Black';
+$n-Regular: 'NeueMachina-Regular';
+$n-Bold: 'NeueMachina-Bold';
+$n-Medium: 'NeueMachina-Medium';
+$n-UltraBold: 'NeueMachina-Ultrabold';
+
+.t-bold {
+  font-family: $t-Bold;
+}
+
+.t-dbold {
+  font-family: $t-DemiBold;
+}
+
+.n-bold {
+  font-family: $n-Bold;
+}
+
+.font-18 {
+  font-size: 18px;
+
+  @include r(1200) {
+    font-size: 14px;
+  }
+
+
+}
+
+.ls-05 {
+  letter-spacing: 0.5px;
+
+  @include r(1200) {
+    letter-spacing: 0.37px;
+  }
+}
