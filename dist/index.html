@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#EA4256">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <div class="layout">
+        <style>
+            .preloader__wrp {
+                position: fixed;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                min-height: 300px;
+                width: 100vw;
+                background-color: #ffffff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                z-index: 100;
+            }
+        
+            .preloader {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 50px;
+                width: 50px;
+                margin: -25px 0 0 -25px;
+            }
+        
+            .preloader span {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #EA4256;
+                -webkit-animation: preloader 1.7s infinite ease-in-out both;
+                animation: preloader 1.7s infinite ease-in-out both;
+                margin-right: 5px;
+            }
+        
+            .preloader span:nth-child(1) {
+                left: 0;
+                -webkit-animation-delay: 0.6s;
+                animation-delay: 0.6s;
+            }
+        
+            .preloader span:nth-child(2) {
+                left: 15px;
+                -webkit-animation-delay: 0.4s;
+                animation-delay: 0.4s;
+            }
+        
+            .preloader span:nth-child(3) {
+                left: 30px;
+                -webkit-animation-delay: 0.2s;
+                animation-delay: 0.2s;
+            }
+        
+            .preloader span:nth-child(4) {
+                left: 45px;
+                -webkit-animation-delay: 0.1s;
+                animation-delay: 0.1s;
+            }
+        
+            @-webkit-keyframes preloader {
+                0%, 80%, 100% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                40% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        
+            @keyframes preloader {
+                0%, 80%, 100% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                40% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        </style>
+        <div class="preloader__wrp">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>        <header class="header">
+            <div class="container">
+                <div class="header-in d-flex justify-content-between align-items-center">
+                    <div class="header-left">
+                        <button class="header-burger js-show-menu">
+                            <svg class="header-burger__icon" width="41" height="29">
+                                <use xlink:href="#burger"></use>
+                            </svg>
+                        </button>
+        
+                        <a href="#" class="header-logo">
+                            <svg width="153" height="42">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+        
+                        <div class="header-geo">
+                            <svg class="header-marker" width="22" height="26">
+                                <use xlink:href="#marker"></use>
+                            </svg>
+                            <span>Сочи, Москва, <br> Санкт-Петербург</span>
+                        </div>
+                    </div>
+        
+        
+                    <div class="header-tel">
+                        <svg width="44" height="44">
+                            <use xlink:href="#tel"></use>
+                        </svg>
+                        <div class="d-flex flex-column align-items-start">
+                            <a href="tel:84953208995" class="header-tel__link">+7 (495) 320–89–95</a>
+                            <span>Ежедневно с 11:00–19:00</span>
+                        </div>
+                    </div>
+                    <div class="header-buttons">
+                        <a class="button button--secondary" href="#">
+                            <svg width="25" height="16">
+                                <use xlink:href="#camera"></use>
+                            </svg>
+                            <span>Блогерам</span>
+                        </a>
+                        <a class="button button--primary" href="#">
+                            <svg width="18" height="18">
+                                <use xlink:href="#cabinet"></use>
+                            </svg>
+                            <span>Войти</span>
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </header>
+        
+        <div class="menu">
+            <div class="container">
+                <div class="menu__in">
+                    <button class="menu__close js-close-menu">
+                        <svg width="13" height="13">
+                            <use xlink:href="#cross-thin"></use>
+                        </svg>
+                        <span class="font-18 ls-05 ml-2 ml-xl-3 mt-1">Скрыть</span>
+                    </button>
+                    <div class="menu__content">
+                        <div class="section__subtitle">МЕНЮ</div>
+        
+                        <div class="menu__list d-flex flex-column align-items-start">
+                            <a class="menu__link" href="#ind">Для кого</a>
+                            <a class="menu__link" href="#how">Как это работает</a>
+                            <a class="menu__link" href="#tariff">Тарифы</a>
+                            <a class="menu__link" href="#stat">Статистика платформы</a>
+                            <a class="menu__link" href="#questions">Часто задаваемые вопросы</a>
+                        </div>
+        
+                        <div class="menu-tel__wrapper">
+                            <div class="menu-tel">
+                                <svg width="44" height="44">
+                                    <use xlink:href="#tel"></use>
+                                </svg>
+                                <div class="d-flex flex-column align-items-start">
+                                    <a href="tel:84953208995" class="menu-tel__link">+7 (495) 320–89–95</a>
+                                    <span>Ежедневно с 11:00–19:00</span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="menu__buttons">
+                            <a href="#" class="button button--yellow">
+                                <svg width="18" height="13">
+                                    <use xlink:href="#camera"></use>
+                                </svg>
+                                <span>Блогерам</span>
+                            </a>
+                            <a href="#" class="button button--yellow">
+                                <svg width="17" height="15">
+                                    <use xlink:href="#hands"></use>
+                                </svg>
+                                <span>Партнерам</span>
+                            </a>
+                            <a href="#" class="button button--secondary">
+                                <svg width="16" height="17">
+                                    <use xlink:href="#login"></use>
+                                </svg>
+                                <span>Войти</span>
+                            </a>
+                        </div>
+        
+                        <a href="#" class="button button--primary w-100">
+                            <svg width="17" height="17">
+                                <use xlink:href="#bag"></use>
+                            </svg>
+                            <span>Добавить заведение</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>        <main role="main" class="layout__in">
+            <section class="offer">
+                <div class="offer-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-7 col-md-9 offer-in__wrapper">
+                                <div class="offer-in">
+                                    <div class="offer-promo">
+                                        <svg width="23" height="23">
+                                            <use xlink:href="#clocks"></use>
+                                        </svg>
+                                        <span>Внедрите готовое решение за 15 минут</span>
+                                    </div>
+            
+                                    <h1 class="offer__title section__title-h1">Бартерная реклама
+                                        у&nbsp;инстаграм-блогеров
+                                        для&nbsp;оффлайн заведений</h1>
+            
+                                    <div class="offer__description">
+                                        <span>BarterMap</span> — карта оффлайн заведений, которая
+                                        привлекает проверенных блогеров для рекламы
+                                        по бартеру, автоматически собирает статистику
+                                        рекламы и готовит итоговые отчёты
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-md-3 offer__pictures-wrapper">
+                                <img class="offer-circles" src="assets/img/circles.png" alt="circles">
+                                <img class="offer-phone" src="assets/img/phone.png" alt="phone">
+                                <span class="offer-mobile-circles"></span>
+                            </div>
+                        </div>
+                        <svg class="offer__app" width="547" preserveAspectRatio="none" height="102" viewBox="0 0 547 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 0H547V102C411.071 102 291.07 102 178.5 102C117.432 102 58.5506 0 0.5 0Z" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section class="ind section--inner" id="ind">
+                <div class="container">
+                    <div class="ind__title section__title-h1">Индустрии, в которых бартерная реклама
+                        приносит&nbsp;<span><svg><use xlink:href="#outline"></use></svg>отличные</span> результаты
+                    </div>
+            
+                    <div class="ind-slider-wrapper js-ind-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ind-item">
+                                    <div class="ind-item__top">
+                                        <span class="ind-item__number">01</span>
+                                        <div class="ind-item__picture-wrapper">
+                                            <img class="img-responsive" src="assets/img/ind-1.png" alt="Industries picture">
+                                        </div>
+                                        <svg width="100%" height="57" preserveAspectRatio="none">
+                                            <use xlink:href="#ind-vector"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="ind-item__bottom">
+                                        <div class="ind-item__title section__title-h2">Еда</div>
+                                        <div class="ind-item__list">
+                                            <span>Кафе и рестораны</span>
+                                            <span>Быстрое питание</span>
+                                            <span>Кондитерские</span>
+                                            <span>Паб & Бары</span>
+                                            <span>Кальянные</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ind-item">
+                                    <div class="ind-item__top">
+                                        <span class="ind-item__number">02</span>
+                                        <div class="ind-item__picture-wrapper">
+                                            <img class="img-responsive" src="assets/img/ind-2.png" alt="Industries picture">
+                                        </div>
+                                        <svg width="100%" height="57" preserveAspectRatio="none">
+                                            <use xlink:href="#ind-vector"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="ind-item__bottom">
+                                        <div class="ind-item__title section__title-h2">Красота</div>
+                                        <div class="ind-item__list">
+                                            <span>Спа-салоны</span>
+                                            <span>Салоны красоты</span>
+                                            <span>Магазины косметики</span>
+                                            <span>Барбер шопы</span>
+                                            <span>Пирсинг & Тату</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ind-item">
+                                    <div class="ind-item__top">
+                                        <span class="ind-item__number">03</span>
+                                        <div class="ind-item__picture-wrapper">
+                                            <img class="img-responsive" src="assets/img/ind-3.png" alt="Industries picture">
+                                        </div>
+                                        <svg width="100%" height="57" preserveAspectRatio="none">
+                                            <use xlink:href="#ind-vector"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="ind-item__bottom">
+                                        <div class="ind-item__title section__title-h2">Мода</div>
+                                        <div class="ind-item__list">
+                                            <span>Одежда & Обувь</span>
+                                            <span>Ювелирные изделия</span>
+                                            <span>Ателье</span>
+                                            <span>Аксессуары</span>
+                                            <span>Украшения</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ind-item">
+                                    <div class="ind-item__top">
+                                        <span class="ind-item__number">04</span>
+                                        <div class="ind-item__picture-wrapper">
+                                            <img class="img-responsive" src="assets/img/ind-4.png" alt="Industries picture">
+                                        </div>
+                                        <svg width="100%" height="57" preserveAspectRatio="none">
+                                            <use xlink:href="#ind-vector"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="ind-item__bottom">
+                                        <div class="ind-item__title section__title-h2">Здоровье</div>
+                                        <div class="ind-item__list">
+                                            <span>Стоматологии & клиники</span>
+                                            <span>Фитнес залы & Бассейн</span>
+                                            <span>Спортивные секции</span>
+                                            <span>Бани & Сауны</span>
+                                            <span>Аптеки</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ind-item">
+                                    <div class="ind-item__top">
+                                        <span class="ind-item__number">05</span>
+                                        <div class="ind-item__picture-wrapper">
+                                            <img class="img-responsive" src="assets/img/ind-5.png" alt="Industries picture">
+                                        </div>
+                                        <svg width="100%" height="57" preserveAspectRatio="none">
+                                            <use xlink:href="#ind-vector"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="ind-item__bottom">
+                                        <div class="ind-item__title section__title-h2">Досуг</div>
+                                        <div class="ind-item__list">
+                                            <span>Квест комнаты</span>
+                                            <span>Парки атракционов</span>
+                                            <span>Компьютерные клубы</span>
+                                            <span>Кино & Театры</span>
+                                            <span>Аквапарки</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ind-item">
+                                    <div class="ind-item__top">
+                                        <span class="ind-item__number">05</span>
+                                        <div class="ind-item__picture-wrapper">
+                                            <img class="img-responsive" src="assets/img/ind-6.png" alt="Industries picture">
+                                        </div>
+                                        <svg width="100%" height="57" preserveAspectRatio="none">
+                                            <use xlink:href="#ind-vector"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="ind-item__bottom">
+                                        <div class="ind-item__title section__title-h2">Другое</div>
+                                        <div class="ind-item__list">
+                                            <span>Ремонт техники</span>
+                                            <span>Автосервисы</span>
+                                            <span>Химчистка</span>
+                                            <span>Бытовые услуги</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="ind-button">
+                                    <svg width="41" height="44"><use xlink:href="#placemark"></use></svg>
+                                    <span>Добавить <br>
+                                    заведение</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner" id="how">
+                <div class="container">
+                    <div class="section__title-h1"><span class="section-decor"><span>Как это работает?</span></span></div>
+            
+                    <div class="work-list">
+                        <div class="work work--1">
+                            <div class="row">
+                                <div class="col-md-4 col-xl-6">
+                                    <div class="work-picture__wrapper">
+                                        <img class="work-picture" src="assets/img/work-1.png" alt="work picture">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-xl-6">
+                                    <div class="work-info">
+                                        <div class="section__subtitle">БЫСТРО И БЕСПЛАТНО</div>
+                                        <div class="section__title-h2 mt-2 mt-xl-3 mb-3 mb-xl-4">Создайте карточку
+                                            заведения за 15 минут</div>
+                                        <div class="work__description mb-3 mb-xl-5">Достаточно один раз оформить карточку заведения,
+                                            чтобы блогеры начали регулярно приходить в гости
+                                            и рекламировать ваши товары, услуги</div>
+            
+                                        <a href="#" class="button button--primary">
+                                            <svg width="21" height="20">
+                                                <use xlink:href="#bag"></use>
+                                            </svg>
+                                            <span>Перейти к созданию</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="row">
+                                <div class="col-md-8 col-xl-8 order-2 order-md-1">
+                                    <div class="work-info">
+                                        <div class="section__subtitle">ГИБКИЕ НАСТРОЙКИ</div>
+                                        <div class="section__title-h2 mt-2 mt-xl-3 mb-3 mb-xl-4">Задайте ограничения <br>
+                                            на визиты блогеров <svg class="d-inline-block" width="38" height="24"><use xlink:href="#rec"></use></svg></div>
+                                        <div class="work-switch__wrapper mb-3 mb-xl-5">
+                                            <div class="work-switch">
+                                                <svg width="25" height="45">
+                                                    <use xlink:href="#switch"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="work-switch__list">
+                                                <div class="work-switch__item">Максимальное кол-во визитов в месяц</div>
+                                                <div class="work-switch__item">Частота повторных визитов</div>
+                                                <div class="work-switch__item">Динамический депозит, который подстраивается под масштаб блогера</div>
+                                            </div>
+                                        </div>
+            
+                                        <a href="#" class="button button--primary">
+                                            <svg width="21" height="20">
+                                                <use xlink:href="#bag"></use>
+                                            </svg>
+                                            <span>Добавить заведение</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xl-4 order-1 order-md-2">
+                                    <div class="work-picture__wrapper">
+                                        <img class="work-picture" src="assets/img/work-2.png" alt="work picture">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work work--3">
+                            <div class="row">
+                                <div class="col-md-4 col-xl-6">
+                                    <div class="work-picture__wrapper">
+                                        <img class="work-picture" src="assets/img/work-3.png" alt="work picture">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-xl-6">
+                                    <div class="work-info">
+                                        <div class="section__subtitle">ТЩАТЕЛЬНАЯ МОДЕРАЦИЯ</div>
+                                        <div class="section__title-h2 mt-2 mt-xl-3 mb-3 mb-xl-4">Принимайте у себя
+                                            проверенных блогеров</div>
+                                        <div class="work__description mb-3 mb-xl-5">Блогеры находят ваше заведение, внутри системы
+                                            бронируют депозит и связываются  с вами, чтобы
+                                            договорится о визите</div>
+                                        <div class="work-additional">
+                                            <span class="work-additional__perc">72%</span>
+                                            <span>блогеров отсеивается на <br> этапе модерации</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work work--4">
+                            <div class="row">
+                                <div class="col-md-8 col-xl-8 order-2 order-md-1">
+                                    <div class="work-info">
+                                        <div class="section__subtitle">УДОБНЫЕ ОТЧЕТЫ</div>
+                                        <div class="section__title-h2 mt-2 mt-xl-3 mb-3 mb-xl-4">Следите за статистикой
+                                            в личном кабинете <svg class="d-inline-block" width="100" height="53"><use xlink:href="#curve"></use></svg></div>
+                                        <div class="work__description mb-3 mb-xl-5">
+                                            BarterMap автоматически собирает рекламные истории
+                                            блогера и их статистику, после чего формирует ответ о
+                                            визите блогера и сводную таблицу с общей статистикой
+                                        </div>
+            
+                                        <a href="#" class="button button--primary">
+                                            <svg width="21" height="20">
+                                                <use xlink:href="#bag"></use>
+                                            </svg>
+                                            <span>Создать профиль заведения</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-xl-4 order-1 order-md-2">
+                                    <div class="work-picture__wrapper">
+                                        <img class="work-picture" src="assets/img/work-4.png" alt="work picture">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="row">
+                                <div class="col-md-4 col-xl-6">
+                                    <div class="work-picture__wrapper">
+                                        <img class="work-picture" src="assets/img/work-5.png" alt="work picture">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-xl-6">
+                                    <div class="work-info">
+                                        <div class="section__subtitle">ОТСЛЕЖИВАЙТЕ КОНВЕРСИИ</div>
+                                        <div class="section__title-h2 mt-2 mt-xl-3 mb-3 mb-xl-4">Создавайте акции для
+                                            постоянных клиентов</div>
+                                        <div class="work__description mb-3 mb-xl-5">При желании вы можете создать предложение для подписчиков блогера с выгодной акцией, так можно замотивировать людей посетить заведение и отследить конверсию</div>
+            
+                                        <a href="#" class="button button--primary">
+                                            <svg width="21" height="20">
+                                                <use xlink:href="#megafon"></use>
+                                            </svg>
+                                            <span>Перейти к созданию</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner pay" id="tariff">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="section__title-h2 mb-3 mb-xl-4 tal">Оплачивайте
+                                реальные&nbsp;охваты <svg width="38" height="38" class="pay-star d-inline-block"><use xlink:href="#star"></use></svg>
+                            </div>
+                            <div class="font-18 text-gray ls-05 mb-4 mb-md-0">Рекламные охваты - количество людей, которые
+                                узнали о вашем бренде из рекламы блогера</div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="pay-info font-18 ls-05">
+                                <div class="pay-info__text ">После визита блогер сдает статистику с охватами рекламы,
+                                    такое же количество охватов списывается с вашего баланса</div>
+            
+                                <div class="pay-info__title">Это прозрачно, прогнозируемо и выгодно</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner tariff-section">
+                <div class="container">
+                    <div class="tariff-wrapper">
+                        <svg width="184" height="157" class="tariff__icon tariff__icon--1">
+                            <use xlink:href="#tariff-ell-1"></use>
+                        </svg>
+                        <svg width="40" height="42" class="tariff__icon tariff__icon--2" >
+                            <use xlink:href="#tariff-ell-2"></use>
+                        </svg>
+                        <span class="tariff__icon tariff__icon--3"></span>
+                        <div class="js-tariff-slider tariff-slider-wrapper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="tariff">
+                                        <div class="tariff__top">
+                                            <div class="tariff__title section__title-h2">Lite</div>
+                                        </div>
+                                        <div class="tariff__middle">
+                                            <div class="tariff__number">30 000</div>
+                                            <div class="font-18 text-gray ls-05">рекламных охватов</div>
+                                        </div>
+                                        <div class="tariff__info">
+                                            <div class="tariff__info-item">
+                                                100₽ - 1000 охватов
+                                            </div>
+                                        </div>
+                                        <a href="#" class="tariff__button button button--primary font-18">
+                                            <svg width="22" height="23">
+                                                <use xlink:href="#cart"></use>
+                                            </svg>
+                                            <span>Купить за <span class="t-dbold">3 000 ₽</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="tariff">
+                                        <div class="tariff__top">
+                                            <div class="tariff__bar">Оптимально</div>
+                                            <div class="tariff__title section__title-h2">Comfort</div>
+                                        </div>
+                                        <div class="tariff__middle">
+                                            <div class="tariff__number">60 000</div>
+                                            <div class="font-18 text-gray ls-05">рекламных охватов</div>
+                                        </div>
+                                        <div class="tariff__info">
+                                            <div class="tariff__info-item tariff__info-item--yellow">
+                                                Выгода 25%
+                                            </div>
+                                        </div>
+                                        <a href="#" class="tariff__button button button--primary font-18">
+                                            <svg width="22" height="23">
+                                                <use xlink:href="#cart"></use>
+                                            </svg>
+                                            <span>Купить за <span class="t-dbold">4 875 ₽</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="tariff">
+                                        <div class="tariff__top">
+                                            <div class="tariff__bar tariff__bar--green">Выгодно</div>
+                                            <div class="tariff__title section__title-h2">Premium</div>
+                                        </div>
+                                        <div class="tariff__middle">
+                                            <div class="tariff__number">300 000</div>
+                                            <div class="font-18 text-gray ls-05">рекламных охватов</div>
+                                        </div>
+                                        <div class="tariff__info">
+                                            <div class="tariff__info-item tariff__info-item--green">
+                                                Выгода 50%
+                                            </div>
+                                        </div>
+                                        <a href="#" class="tariff__button button button--primary font-18">
+                                            <svg width="22" height="23">
+                                                <use xlink:href="#cart"></use>
+                                            </svg>
+                                            <span>Купить за <span class="t-dbold">15 000 ₽</span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner">
+                <div class="container">
+                    <div class="section__title-h1">Почему бизнес <span class="section-decor"><span>выбирает</span></span> BarterMap?</div>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="table-wrapper">
+                                <div class="table-info">
+                                    <div>
+                                        <span>BarterMap</span>
+                                    </div>
+                                    <div>
+                                        <span>Менеджеры</span>
+                                    </div>
+                                    <div>
+                                        <span>Агенство</span>
+                                    </div>
+                                </div>
+                                <div class="table">
+                                    <div class="table-row table-header">
+                                        <div>Удобно</div>
+                                        <div>Эффективно</div>
+                                        <div>Выгодно</div>
+                                    </div>
+                                    <div>
+                                        <div class="table-row table-body">
+                                            <div>
+                                                <svg width="23" height="17" fill="#fff">
+                                                    <use xlink:href="#check"></use>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <svg width="23" height="17" fill="#fff">
+                                                    <use xlink:href="#check"></use>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <svg width="23" height="17" fill="#fff">
+                                                    <use xlink:href="#check"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="table-row table-body">
+                                            <div>
+                                                <svg width="17" height="17" fill="#C8C8C8">
+                                                    <use xlink:href="#cross"></use>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <svg width="17" height="17" fill="#C8C8C8">
+                                                    <use xlink:href="#cross"></use>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <svg width="23" height="17" fill="#C8C8C8">
+                                                    <use xlink:href="#check"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="table-row table-body">
+                                        <div>
+                                            <svg width="23" height="17" fill="#C8C8C8">
+                                                <use xlink:href="#check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg width="23" height="17" fill="#C8C8C8">
+                                                <use xlink:href="#check"></use>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg width="17" height="17" fill="#C8C8C8">
+                                                <use xlink:href="#cross"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="reviews-wrapper">
+                                <div class="reviews-in">
+                                    <div class="reviews-top">
+                                        <div class="reviews-top__slider js-rev-top-slider">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="reviews-top__item">
+                                                        <span>Нажал кнопку и непонятно откуда начали
+                                                        толпами переть клиенты. Их было так много,
+                                                        что пришлось даже закрыть ресторан из-за
+                                                        нехватки места внутри. Но они не сдались,
+                                                        взяли двери штурмом и съели нашего
+                                                        шеф-повара Василия :&nbsp;(</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="reviews-top__item">
+                                                        <span>Нажал кнопку и непонятно откуда начали
+                                                        толпами переть клиенты. Их было так много,
+                                                        что пришлось даже закрыть ресторан из-за
+                                                        нехватки места внутри. :&nbsp;(</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reviews-nav">
+                                            <button class="reviews-nav__item js-rev-prev">
+                                                <svg width="16" height="9">
+                                                    <use xlink:href="#arrow-top"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="reviews-nav__item js-rev-next">
+                                                <svg width="16" height="9">
+                                                    <use xlink:href="#arrow-bottom"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-bottom js-rev-bottom-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="reviews-bottom__item">
+                                                    <div class="reviews-info">
+                                                        <div class="reviews-info__picture-wrapper">
+                                                            <img class="reviews-info__picture" src="assets/img/rev-1.jpg" alt="review photo">
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-start">
+                                                            <div class="reviews-info__title">Семен Непонимающий</div>
+                                                            <div class="reviews-info__status text-gray">Founder & CEO</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reviews-rating">
+                                                        <span>4.5</span>
+                                                        <svg width="19" height="19">
+                                                            <use xlink:href="#ussr"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="reviews-bottom__item">
+                                                    <div class="reviews-info">
+                                                        <div class="reviews-info__picture-wrapper">
+                                                            <img class="reviews-info__picture" src="assets/img/rev-1.jpg" alt="review photo">
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-start">
+                                                            <div class="reviews-info__title">Василий</div>
+                                                            <div class="reviews-info__status text-gray">Шеф-повар</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reviews-rating">
+                                                        <span>2.9</span>
+                                                        <svg width="19" height="19">
+                                                            <use xlink:href="#ussr"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner why-section" id="stat">
+                <div class="container">
+                    <div class="section__title-h1">Статистика <span class="section-decor"><span>платформы</span></span></div>
+                    <div class="js-why-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="why">
+                                    <div class="why__icon">
+                                        <svg width="43" height="43" fill="#fff">
+                                            <use xlink:href="#bag"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="why__bottom">
+                                        <div class="why__title section__title-h2">167</div>
+                                        <div class="why__subtitle">Заведений</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="why">
+                                    <div class="why__icon">
+                                        <svg width="43" height="28" fill="#fff">
+                                            <use xlink:href="#camera"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="why__bottom">
+                                        <div class="why__title section__title-h2">1328</div>
+                                        <div class="why__subtitle">Блогеров</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="why">
+                                    <div class="why__icon">
+                                        <svg width="43" height="37" fill="#fff">
+                                            <use xlink:href="#hands"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="why__bottom">
+                                        <div class="why__title section__title-h2">1368</div>
+                                        <div class="why__subtitle">Бартерных сделок</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="why">
+                                    <div class="why__icon">
+                                        <svg width="44" height="34" fill="#fff">
+                                            <use xlink:href="#eye"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="why__bottom">
+                                        <div class="why__title section__title-h2">9.200.000</div>
+                                        <div class="why__subtitle">Рекламных охватов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner pb-0">
+                <div class="container">
+                    <div class="section__title-h1">Начните <span class="section-decor"><span>прямо</span></span> сейчас</div>
+                </div>
+                <div class="now">
+                    <div class="container">
+                        <div class="row align-items-md-center">
+                        <div class="col-xl-8 col-md-9">
+                            <div class="d-flex flex-column flex-md-row align-items-center">
+                                <div class="now__icon mb-3 mb-md-0">
+                                    <svg width="34" height="30" fill="#333">
+                                        <use xlink:href="#hands"></use>
+                                    </svg>
+                                </div>
+                                <div class="now__title section__title-h2 mb-4 mb-md-0">Привлекайте клиентов
+                                    через&nbsp;бартер с&nbsp;блогерами</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-3">
+                            <div class="d-flex w-100 justify-content-center">
+                                <a href="#" class="button button--thirdary now__button">
+                                    <svg width="20" height="20">
+                                        <use xlink:href="#bag"></use>
+                                    </svg>
+                                    <span>Добавить <span class="d-sm-none d-xl-inline">заведение</span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner" id="questions">
+                <div class="container">
+                    <div class="section__title-h1"><span class="section-decor"><span>Частые вопросы</span></span></div>
+                    <div class="question-list">
+                        <div class="question">
+                            <div class="question__top js-toggle-question">
+                                <div class="question__title">Сколько времени нужно тратить на сервис?</div>
+                                <svg width="22" height="22">
+                                    <use xlink:href="#cross-thin"></use>
+                                </svg>
+                            </div>
+                            <div class="question__bottom">
+                                <div class="question__bottom-in">
+                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
+            
+                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
+                                    еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
+            
+                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question__top js-toggle-question">
+                                <div class="question__title">Сколько стоит размещение?</div>
+                                <svg width="22" height="22">
+                                    <use xlink:href="#cross-thin"></use>
+                                </svg>
+                            </div>
+                            <div class="question__bottom">
+                                <div class="question__bottom-in">
+                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
+            
+                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
+                                        еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
+            
+                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question__top js-toggle-question">
+                                <div class="question__title">Можно ли выбирать блогеров самостоятельно?</div>
+                                <svg width="22" height="22">
+                                    <use xlink:href="#cross-thin"></use>
+                                </svg>
+                            </div>
+                            <div class="question__bottom">
+                                <div class="question__bottom-in">
+                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
+            
+                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
+                                        еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
+            
+                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question__top js-toggle-question">
+                                <div class="question__title">Какой депозит устанавливать для блогеров?</div>
+                                <svg width="22" height="22">
+                                    <use xlink:href="#cross-thin"></use>
+                                </svg>
+                            </div>
+                            <div class="question__bottom">
+                                <div class="question__bottom-in">
+                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
+            
+                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
+                                        еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
+            
+                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="question__top js-toggle-question">
+                                <div class="question__title">На чем зарабатывает платформа?</div>
+                                <svg width="22" height="22">
+                                    <use xlink:href="#cross-thin"></use>
+                                </svg>
+                            </div>
+                            <div class="question__bottom">
+                                <div class="question__bottom-in">
+                                    <p>Платформа взымает комиссию за каждый визит блогера.</p>
+            
+                                    <p>Комиссия зависит от эффективности рекламы, а точнее от того количества людей, которое узнало
+                                        о ресторане из рекламы блогера</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section--inner">
+                <div class="container">
+                    <div class="section__title-h1"><span class="section-decor"><span>Полезные материалы</span></span></div>
+                    <div class="material-list js-material-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="material">
+                                    <div class="material__picture" style="background-image: url('assets/img/material-1.jpg');"></div>
+                                    <div class="material__info">
+                                        <div class="material__title">Заголовок статьи,
+                                            который может быть
+                                            довольно длинным</div>
+                                        <div class="material__text">Если ваше заведение
+                                            работает с блогерами
+                                            только по предварительному
+                                            бронированию, тогда
+                                            еще нужно подтверждать</div>
+                                        <a href="#" class="button button--dark">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#login"></use>
+                                            </svg>
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="material">
+                                    <div class="material__picture" style="background-image: url('assets/img/material-2.jpg');"></div>
+                                    <div class="material__info">
+                                        <div class="material__title">Заголовок статьи,
+                                            который может быть
+                                            довольно длинным</div>
+                                        <div class="material__text">Если ваше заведение
+                                            работает с блогерами
+                                            только по предварительному</div>
+                                        <a href="#" class="button button--dark">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#login"></use>
+                                            </svg>
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="material">
+                                    <div class="material__picture" style="background-image: url('assets/img/material-3.jpg');"></div>
+                                    <div class="material__info">
+                                        <div class="material__title">Заголовок статьи,
+                                            который может быть
+                                            довольно длинным</div>
+                                        <div class="material__text">Если ваше заведение
+                                            работает с блогерами
+                                            только по предварительному
+                                            бронированию, тогда
+                                            еще нужно подтверждать</div>
+                                        <a href="#" class="button button--dark">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#login"></use>
+                                            </svg>
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="material">
+                                    <div class="material__picture" style="background-image: url('assets/img/material-1.jpg');"></div>
+                                    <div class="material__info">
+                                        <div class="material__title">Заголовок статьи,
+                                            который может быть
+                                            довольно длинным</div>
+                                        <div class="material__text">Если ваше заведение
+                                            работает с блогерами
+                                            только по предварительному
+                                            бронированию, тогда
+                                            еще нужно подтверждать</div>
+                                        <a href="#" class="button button--dark">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#login"></use>
+                                            </svg>
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="material">
+                                    <div class="material__picture" style="background-image: url('assets/img/material-2.jpg');"></div>
+                                    <div class="material__info">
+                                        <div class="material__title">Заголовок статьи,
+                                            который может быть
+                                            довольно длинным</div>
+                                        <div class="material__text">Если ваше заведение
+                                            работает с блогерами
+                                            только по предварительному
+                                            бронированию, тогда
+                                            еще нужно подтверждать</div>
+                                        <a href="#" class="button button--dark">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#login"></use>
+                                            </svg>
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="material">
+                                    <div class="material__picture" style="background-image: url('assets/img/material-3.jpg');"></div>
+                                    <div class="material__info">
+                                        <div class="material__title">Заголовок статьи,
+                                            который может быть
+                                            довольно длинным</div>
+                                        <div class="material__text">Если ваше заведение
+                                            работает с блогерами
+                                            только по предварительному
+                                            бронированию, тогда
+                                            еще нужно подтверждать</div>
+                                        <a href="#" class="button button--dark">
+                                            <svg width="20" height="20">
+                                                <use xlink:href="#login"></use>
+                                            </svg>
+                                            <span>Подробнее</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 mt-xl-4">
+                        <a href="#" class="button button--secondary material__more">
+                            <span>Показать еще</span>
+                            <span class="material__more-icon">
+                                <svg width="18" height="4">
+                                    <use xlink:href="#dots"></use>
+                                </svg>
+                            </span>
+            
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__in">
+                    <div class="d-flex align-items-center justify-content-between mb-4 mb-sm-4">
+                        <a href="#" class="footer-logo">
+                            <svg width="174" height="78">
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="d-flex align-items-center">
+                            <a class="footer__social mr-2 mr-xl-4" href="#">
+                                <img src="assets/img/in.png" alt="Instagram">
+                            </a>
+                            <a class="footer__social" href="#">
+                                <img src="assets/img/vk.png" alt="Vkontakte">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between flex-column align-items-center flex-md-row align-items-md-end">
+                        <div class="d-flex flex-md-column align-items-center align-items-md-start mb-3 mb-md-0">
+                            <a href="#" class="footer__link d-flex align-items-center mr-4 mr-md-0 mb-md-2 mb-xl-3">
+                                <svg width="17" height="17">
+                                    <use xlink:href="#comrades"></use>
+                                </svg>
+                                <span class="ml-2">Партнерам</span>
+                            </a>
+                            <a href="#" class="footer__link d-flex align-items-center">
+                                <svg width="17" height="12" fill="#fff">
+                                    <use xlink:href="#camera"></use>
+                                </svg>
+                                <span class="ml-2">Блогерам</span>
+                            </a>
+                        </div>
+        
+                        <div class="d-flex flex-column align-items-center align-items-md-end">
+                            <a class="footer__agreement mb-2 mb-xl-3 ls-05" href="#">Пользовательское соглашение</a>
+                            <a class="footer__tel ls-05" href="tel:+7 (495) 320-89-95">+7 (495) 320-89-95</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    </div>
+    <svg width="0" height="0" class="svg-sprite">
+        <symbol id="logo" viewBox="0 0 153 42"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M84.0651 15.4468C83.408 14.8714 82.5766 14.5671 81.681 14.457C79.8673 14.2327 77.791 14.8039 76.3759 15.5352C75.7204 15.8738 74.9349 16.3482 74.2228 16.9203V16.8419C74.2228 15.3467 73.0103 14.1343 71.5152 14.1343C70.02 14.1343 68.8076 15.3467 68.8076 16.8419V39.1324C68.8076 40.6275 70.02 41.84 71.5152 41.84C73.0103 41.84 74.2228 40.6275 74.2228 39.1324V21.9502C76.35 20.1624 78.6941 19.2001 81.7085 19.3227C82.9677 19.3736 84.3895 19.1584 84.8356 17.7858C85.1041 16.9586 84.7189 16.0197 84.0651 15.4468Z" />
+            <path d="M151.459 15.4468C150.801 14.8714 149.97 14.5671 149.075 14.457C147.261 14.2327 145.184 14.8039 143.769 15.5352C143.114 15.8738 142.328 16.3482 141.616 16.9203V16.8419C141.616 15.3467 140.404 14.1343 138.909 14.1343C137.414 14.1343 136.201 15.3467 136.201 16.8419V39.1324C136.201 40.6275 137.414 41.84 138.909 41.84C140.404 41.84 141.616 40.6275 141.616 39.1324V21.9502C143.744 20.1624 146.088 19.2001 149.102 19.3227C150.361 19.3736 151.783 19.1584 152.229 17.7858C152.498 16.9586 152.113 16.0197 151.459 15.4468Z" />
+            <path d="M62.2391 24.9038V38.3668C62.2391 39.857 61.1317 41.0903 59.7658 41.0903C58.3999 41.0903 57.2925 39.857 57.2925 38.3668V36.8125C55.6672 39.8311 52.8412 41.3471 49.5674 41.3471C45.2337 41.3471 41.2294 38.6754 41.2294 33.2284C41.2294 27.9358 45.5164 24.9038 51.1685 24.9038C53.1473 24.9038 55.0785 25.3149 57.2925 26.2397V25.2115C57.2925 21.5116 55.6906 19.5078 51.3569 19.5078C49.2964 19.5078 47.6712 20.1115 46.7289 20.561C45.8808 20.9721 45.4097 21.2289 44.6325 21.2289C43.6785 21.2289 42.7129 20.4325 42.7129 19.0066C42.7129 18.0818 43.1724 17.1571 44.4907 16.4633C46.116 15.6152 49.0246 14.6262 52.3217 14.6262C59.2479 14.6262 62.2391 17.8125 62.2391 24.9038ZM57.2925 29.8879C55.3612 28.9114 53.4299 28.5003 51.6871 28.5003C47.9655 28.5003 46.176 30.0422 46.176 32.8682C46.176 35.6425 47.8721 36.9792 50.5097 36.9792C54.1362 36.9792 57.2925 34.5126 57.2925 29.8879Z" />
+            <path d="M87.9885 15.2125V10.4718C87.9885 8.98586 89.1734 7.78174 90.636 7.78174C92.0987 7.78174 93.2836 8.98586 93.2836 10.4718V15.2125H99.7762C101.1 15.2125 102.171 16.3015 102.171 17.6466C102.171 18.9916 101.1 20.0807 99.7762 20.0807H93.2836V31.559C93.2836 34.8904 95.1749 36.2221 97.5448 36.2221C98.3261 36.2221 99.1833 36.0687 99.6503 35.9402C100.281 35.761 100.621 35.7351 100.835 35.7351C102.172 35.7351 103.117 36.6832 103.117 38.0283C103.117 39.2199 102.449 40.1547 101.087 40.655C99.9655 41.0653 98.402 41.3471 96.7884 41.3471C92.805 41.3471 87.9893 39.2975 87.9893 32.3796V20.0807" />
+            <path d="M127.74 28.7548H110.884C111.452 33.0443 114.585 36.1005 120.151 36.1005C122.082 36.1005 123.959 35.7461 125.849 35.0114C126.14 34.9063 126.47 34.8413 126.801 34.8413C128.228 34.8413 129.379 35.982 129.379 37.3988C129.379 38.4478 128.744 39.3534 127.846 39.747C125.466 40.7835 122.809 41.3472 119.993 41.3472C110.686 41.3472 105.133 35.3133 105.133 27.6532C105.133 20.0974 110.527 14.0635 118.83 14.0635C126.18 14.0635 130.94 18.7857 130.94 25.948C130.939 27.9026 129.723 28.7548 127.74 28.7548ZM125.321 24.8856C125.321 20.7145 121.526 18.7866 118.644 18.7866C114.731 18.7866 111.915 21.1606 111.07 24.8205L125.321 24.8856Z" />
+            <path d="M34.6276 25.4542C33.2683 25.4542 32.1668 26.5558 32.1668 27.915C32.1668 28.7822 32.0317 29.6353 31.7665 30.4508C30.6341 33.9265 27.3661 36.2605 23.6345 36.2605C18.9297 36.2605 15.1031 32.5172 15.1031 27.915C15.1031 23.3137 18.9306 19.5695 23.6345 19.5695C26.0886 19.5695 28.4252 20.6044 30.0471 22.4097C30.9552 23.4212 32.5112 23.5046 33.5227 22.5957C34.5342 21.6876 34.6176 20.1316 33.7086 19.1201C31.1553 16.2774 27.4829 14.6471 23.6345 14.6471C20.3215 14.6471 17.2853 15.8346 14.9388 17.7992V2.57836C14.9388 1.15409 13.7847 0 12.3604 0C10.9362 0 9.78207 1.15409 9.78207 2.57836C9.78207 7.37485 9.59278 12.2139 9.78124 17.0062C9.93801 20.9821 9.46519 25.0114 10.1782 28.9749C10.8878 32.9208 12.7524 36.6908 16.1646 38.9456C18.3719 40.4041 20.9894 41.1829 23.6337 41.1829C29.5034 41.1829 34.6518 37.483 36.4454 31.976C36.8715 30.6668 37.0875 29.3009 37.0875 27.9158C37.0884 26.5566 35.9868 25.4542 34.6276 25.4542Z" />
+            <path d="M4.06332 13.5647C5.10234 14.0659 5.86451 15.0307 6.31647 16.0922C6.76927 17.1529 6.94022 18.3112 7.04278 19.4603C7.2179 21.4274 7.20205 23.4112 6.99609 25.375C6.9719 25.6051 6.88768 25.8953 6.65753 25.9162C6.49993 25.9304 6.36984 25.8011 6.26477 25.681C4.31349 23.4529 2.54733 21.0605 1.02299 18.5205C0.575199 17.7742 0.139913 16.9911 0.0265046 16.1281C-0.27953 13.7965 2.12622 12.6299 4.06332 13.5647Z" />
+        </symbol>
+        <symbol id="burger" viewBox="0 0 41 29" xmlns="http://www.w3.org/2000/svg">
+            <path d="M39.2917 12.7916H1.70833C0.764847 12.7916 0 13.5564 0 14.4999C0 15.4434 0.764847 16.2083 1.70833 16.2083H39.2917C40.2352 16.2083 41 15.4434 41 14.4999C41 13.5564 40.2352 12.7916 39.2917 12.7916Z" />
+            <path d="M39.2917 0.833252H1.70833C0.764847 0.833252 0 1.5981 0 2.54159C0 3.48507 0.764847 4.24992 1.70833 4.24992H39.2917C40.2352 4.24992 41 3.48507 41 2.54159C41 1.5981 40.2352 0.833252 39.2917 0.833252Z" />
+            <path d="M39.2917 24.7499H1.70833C0.764847 24.7499 0 25.5148 0 26.4583C0 27.4017 0.764847 28.1666 1.70833 28.1666H39.2917C40.2352 28.1666 41 27.4017 41 26.4583C41 25.5148 40.2352 24.7499 39.2917 24.7499Z" />
+        </symbol>
+        <symbol id="marker" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 0.0227051C8.10902 0.026146 5.33744 1.17618 3.2933 3.22052C1.24917 5.26486 0.0994062 8.03655 0.0962524 10.9275C0.0962524 16.641 8.94275 24.284 9.95459 25.1376L11.0022 26.0227L12.0498 25.1376C13.0594 24.284 21.9081 16.641 21.9081 10.9275C21.9049 8.0358 20.7546 5.26346 18.7095 3.21899C16.6644 1.17453 13.8917 0.0249991 11 0.0227051V0.0227051ZM11 21.736C7.67959 18.7113 3.34409 13.7973 3.34409 10.9275C3.34409 8.89706 4.15069 6.94975 5.58645 5.51399C7.02221 4.07823 8.96953 3.27162 11 3.27162C13.0305 3.27162 14.9778 4.07823 16.4136 5.51399C17.8493 6.94975 18.6559 8.89706 18.6559 10.9275C18.6559 13.7919 14.3193 18.708 11 21.736Z" fill="#333333"/>
+            <path d="M11 14.0824C12.7931 14.0824 14.2467 12.6287 14.2467 10.8356C14.2467 9.04249 12.7931 7.58887 11 7.58887C9.20685 7.58887 7.75323 9.04249 7.75323 10.8356C7.75323 12.6287 9.20685 14.0824 11 14.0824Z" fill="#EA4256"/>
+        </symbol>
+        <symbol id="tel" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 2.00196C22 0.896308 21.1017 -0.00946519 20.0006 0.0909758C14.8991 0.55635 10.0955 2.79177 6.44365 6.44365C2.31785 10.5695 -7.76184e-07 16.1652 -9.61651e-07 22C-1.14712e-06 27.8348 2.31785 33.4305 6.44365 37.5563C10.0955 41.2082 14.8991 43.4436 20.0006 43.909C21.1017 44.0095 22 43.1037 22 41.998C22 40.8924 21.1008 40.0076 20.002 39.8849C15.9643 39.4339 12.1754 37.6258 9.27485 34.7251C5.89993 31.3502 4.00392 26.7729 4.00392 22C4.00392 17.2271 5.89993 12.6498 9.27485 9.27485C12.1754 6.37424 15.9643 4.56607 20.002 4.11511C21.1008 3.99239 22 3.10761 22 2.00196Z" fill="#EA4256"/>
+            <circle cx="22" cy="22" r="18" fill="#F3F3F3"/>
+            <path d="M29.3333 21.3333C29.1565 21.3333 28.9869 21.263 28.8619 21.138C28.7369 21.013 28.6666 20.8434 28.6666 20.6666C28.6652 19.2526 28.1028 17.8968 27.103 16.8969C26.1031 15.8971 24.7473 15.3347 23.3333 15.3333C23.1565 15.3333 22.9869 15.263 22.8619 15.138C22.7369 15.013 22.6666 14.8434 22.6666 14.6666C22.6666 14.4898 22.7369 14.3202 22.8619 14.1952C22.9869 14.0702 23.1565 14 23.3333 14C25.1008 14.0019 26.7954 14.7049 28.0452 15.9547C29.295 17.2045 29.998 18.8991 30 20.6666C30 20.8434 29.9297 21.013 29.8047 21.138C29.6797 21.263 29.5101 21.3333 29.3333 21.3333ZM27.3333 20.6666C27.3333 19.6058 26.9119 18.5883 26.1617 17.8382C25.4116 17.088 24.3942 16.6666 23.3333 16.6666C23.1565 16.6666 22.9869 16.7369 22.8619 16.8619C22.7369 16.9869 22.6666 17.1565 22.6666 17.3333C22.6666 17.5101 22.7369 17.6797 22.8619 17.8047C22.9869 17.9297 23.1565 18 23.3333 18C24.0405 18 24.7188 18.2809 25.2189 18.781C25.719 19.2811 26 19.9594 26 20.6666C26 20.8434 26.0702 21.013 26.1952 21.138C26.3202 21.263 26.4898 21.3333 26.6666 21.3333C26.8434 21.3333 27.013 21.263 27.138 21.138C27.263 21.013 27.3333 20.8434 27.3333 20.6666ZM28.7886 28.776L29.3953 28.0766C29.7814 27.6892 29.9982 27.1646 29.9982 26.6176C29.9982 26.0707 29.7814 25.546 29.3953 25.1586C29.3746 25.138 27.7706 23.904 27.7706 23.904C27.3857 23.5375 26.8743 23.3335 26.3428 23.3342C25.8113 23.3349 25.3006 23.5404 24.9166 23.908L23.646 24.9786C22.6087 24.5493 21.6665 23.9194 20.8735 23.125C20.0804 22.3305 19.4521 21.3872 19.0246 20.3493L20.0913 19.0826C20.4591 18.6987 20.6648 18.1879 20.6657 17.6562C20.6666 17.1246 20.4625 16.613 20.096 16.228C20.096 16.228 18.8606 14.626 18.84 14.6053C18.4596 14.2225 17.9439 14.0046 17.4042 13.9989C16.8646 13.9932 16.3444 14.2 15.956 14.5746L15.1893 15.2413C10.66 20.496 20.4133 30.174 25.8413 30C26.3894 30.0031 26.9326 29.8965 27.4388 29.6862C27.945 29.476 28.404 29.1665 28.7886 28.776Z" fill="#333333"/>
+        </symbol>
+        <symbol id="camera" viewBox="0 0 25 16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.8573 2.53716C23.1531 2.19914 22.3229 2.27014 21.6937 2.72517C21.6531 2.75417 21.6146 2.78717 21.5792 2.82118L19.749 4.59429C19.5292 2.02913 17.3104 3.34265e-07 14.5833 3.34265e-07H5.20833C2.33646 -0.000999728 0 2.24214 0 4.99931V10.9997C0 13.7569 2.33646 16 5.20833 16H14.5833C17.3219 16 19.55 13.9529 19.7521 11.3727L21.5812 13.1268C21.6167 13.1598 21.6531 13.1898 21.6927 13.2188C22.0594 13.4828 22.4927 13.6169 22.9302 13.6169C23.2458 13.6169 23.5615 13.5478 23.8573 13.4058C24.5625 13.0678 25 12.3868 25 11.6317V4.31327C25 3.55622 24.5625 2.87618 23.8573 2.53816V2.53716ZM14.5833 13.9999H5.20833C3.48542 13.9999 2.08333 12.6538 2.08333 10.9997V4.99931C2.08333 3.34521 3.48542 1.99913 5.20833 1.99913H14.5833C16.3062 1.99913 17.7083 3.34521 17.7083 4.99931V10.9997C17.7083 12.6538 16.3062 13.9999 14.5833 13.9999V13.9999ZM19.7917 8.58254V7.39346L22.9167 4.36527L22.9427 11.6037L19.7917 8.58154V8.58254Z"/>
+        </symbol>
+        <symbol id="cabinet" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.175 -9.17201e-05H3.825C2.82077 -0.00909079 1.854 0.380718 1.13688 1.08378C0.419761 1.78684 0.0108864 2.7457 0 3.74991V5.99991C0 6.19882 0.0790176 6.38959 0.21967 6.53024C0.360322 6.67089 0.551088 6.74991 0.75 6.74991C0.948912 6.74991 1.13968 6.67089 1.28033 6.53024C1.42098 6.38959 1.5 6.19882 1.5 5.99991V3.74991C1.51065 3.14346 1.76142 2.56599 2.19728 2.14418C2.63315 1.72238 3.21852 1.49068 3.825 1.49991H14.175C14.7815 1.49068 15.3668 1.72238 15.8027 2.14418C16.2386 2.56599 16.4893 3.14346 16.5 3.74991V14.2499C16.4893 14.8564 16.2386 15.4338 15.8027 15.8556C15.3668 16.2774 14.7815 16.5091 14.175 16.4999H3.825C3.21852 16.5091 2.63315 16.2774 2.19728 15.8556C1.76142 15.4338 1.51065 14.8564 1.5 14.2499V11.9999C1.5 11.801 1.42098 11.6102 1.28033 11.4696C1.13968 11.3289 0.948912 11.2499 0.75 11.2499C0.551088 11.2499 0.360322 11.3289 0.21967 11.4696C0.0790176 11.6102 0 11.801 0 11.9999V14.2499C0.0108864 15.2541 0.419761 16.213 1.13688 16.916C1.854 17.6191 2.82077 18.0089 3.825 17.9999H14.175C15.1792 18.0089 16.146 17.6191 16.8631 16.916C17.5802 16.213 17.9891 15.2541 18 14.2499V3.74991C17.9891 2.7457 17.5802 1.78684 16.8631 1.08378C16.146 0.380718 15.1792 -0.00909079 14.175 -9.17201e-05Z" />
+            <path d="M2.25 9.00015C2.25 9.19907 2.32902 9.38983 2.46967 9.53048C2.61032 9.67114 2.80109 9.75015 3 9.75015L12.891 9.72765L9.64875 12.9699C9.57712 13.0391 9.51998 13.1218 9.48067 13.2134C9.44137 13.3049 9.42068 13.4033 9.41981 13.5029C9.41895 13.6024 9.43792 13.7012 9.47563 13.7934C9.51334 13.8855 9.56903 13.9693 9.63945 14.0397C9.70987 14.1101 9.79361 14.1658 9.88578 14.2035C9.97796 14.2412 10.0767 14.2602 10.1763 14.2593C10.2759 14.2585 10.3743 14.2378 10.4658 14.1985C10.5573 14.1592 10.6401 14.102 10.7093 14.0304L14.1488 10.5909C14.5706 10.169 14.8075 9.59677 14.8075 9.00015C14.8075 8.40353 14.5706 7.83134 14.1488 7.4094L10.7108 3.9699C10.5693 3.83329 10.3798 3.75769 10.1832 3.7594C9.98655 3.76111 9.79844 3.83998 9.65939 3.97904C9.52033 4.1181 9.44145 4.30621 9.43974 4.50285C9.43804 4.6995 9.51363 4.88895 9.65025 5.0304L12.8468 8.22765L3 8.25015C2.80109 8.25015 2.61032 8.32917 2.46967 8.46982C2.32902 8.61048 2.25 8.80124 2.25 9.00015Z" />
+        </symbol>
+        <symbol id="clocks" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5 0C9.22552 0 7.00211 0.674463 5.11095 1.9381C3.21978 3.20174 1.7458 4.99779 0.87539 7.09914C0.00498277 9.20049 -0.222756 11.5128 0.220974 13.7435C0.664704 15.9743 1.75997 18.0234 3.36828 19.6317C4.97658 21.24 7.02568 22.3353 9.25647 22.779C11.4872 23.2228 13.7995 22.995 15.9009 22.1246C18.0022 21.2542 19.7983 19.7802 21.0619 17.8891C22.3255 15.9979 23 13.7745 23 11.5C22.9967 8.45102 21.784 5.52787 19.6281 3.37191C17.4721 1.21596 14.549 0.0032977 11.5 0ZM11.5 21.0833C9.6046 21.0833 7.75176 20.5213 6.17579 19.4682C4.59982 18.4152 3.3715 16.9185 2.64616 15.1674C1.92082 13.4163 1.73104 11.4894 2.10081 9.63038C2.47059 7.7714 3.38331 6.06381 4.72356 4.72356C6.06382 3.38331 7.7714 2.47058 9.63039 2.10081C11.4894 1.73103 13.4163 1.92081 15.1674 2.64615C16.9185 3.37149 18.4152 4.59981 19.4683 6.17579C20.5213 7.75176 21.0833 9.6046 21.0833 11.5C21.0805 14.0408 20.07 16.4767 18.2734 18.2734C16.4767 20.07 14.0408 21.0805 11.5 21.0833Z" />
+            <path d="M11.5 5.75C11.2458 5.75 11.0021 5.85097 10.8224 6.03069C10.6426 6.21041 10.5417 6.45417 10.5417 6.70833V10.8531L7.31113 12.8771C7.09509 13.0121 6.94151 13.2273 6.88418 13.4755C6.82685 13.7237 6.87046 13.9845 7.00542 14.2006C7.14038 14.4166 7.35564 14.5702 7.60384 14.6275C7.85203 14.6849 8.11284 14.6413 8.32888 14.5063L12.0089 12.2063C12.1479 12.1192 12.2623 11.9978 12.341 11.8538C12.4197 11.7099 12.4601 11.5481 12.4583 11.384V6.70833C12.4583 6.45417 12.3574 6.21041 12.1776 6.03069C11.9979 5.85097 11.7542 5.75 11.5 5.75Z" />
+        </symbol>
+        <symbol id="outline" viewBox="0 0 262 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M253.34 8.77948C237.23 4.46839 220.562 3.29649 203.726 2.59975C173.088 1.33185 142.405 3.0186 111.875 6.15144C82.8854 9.12615 52.5861 10.5362 24.4999 18C16.8421 20.0351 -2.00001 28 3.49994 40C7.14415 47.9511 15.5 50.0323 16.9999 50.5C28.5 54.0862 40.8215 55.1673 53.4999 56C99.0488 58.9917 143.613 58.0846 189 52.5C206.041 50.4033 224.003 48.0558 240.5 43.5C248.619 41.258 261.059 35.0136 259.876 25.505C259.018 18.6028 251.5 15.125 244.5 12.5C236.5 9.50003 228 8.77948 218 10" stroke="#EA4256" stroke-width="4" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="ind-vector"  preserveAspectRatio="none" viewBox="0 0 266 57" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28.5539C0 9.83584 18.0423 -3.59051 35.9719 1.78517L122.948 27.8626C129.505 29.8285 136.495 29.8285 143.052 27.8626L230.028 1.78517C247.958 -3.59051 266 9.83584 266 28.5539V28.5539C266 43.9881 253.488 56.5 238.054 56.5H133H27.9461C12.5119 56.5 0 43.9881 0 28.5539V28.5539Z" />
+        </symbol>
+        <symbol id="placemark" viewBox="0 0 41 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.6369 41.1534C23.7821 44.9244 17.6254 44.9398 13.7518 41.1881L6.45175 34.4421C-1.45631 26.6394 -1.54165 13.9033 6.26114 5.99535C14.0639 -1.91262 26.7999 -1.99804 34.7079 5.80474C34.7718 5.86782 34.8354 5.93141 34.8985 5.99535C42.7535 13.8515 42.7524 26.5879 34.8963 34.4428C34.88 34.459 34.8637 34.4753 34.8474 34.4915L27.6369 41.1534ZM32.3128 8.58112C25.8997 2.13967 15.479 2.11673 9.03752 8.5299C2.59607 14.9431 2.57313 25.3638 8.9863 31.8052L16.2717 38.5384C18.7601 40.8804 22.6461 40.8659 25.117 38.5055L32.3128 31.8564C38.7401 25.4292 38.7402 15.0086 32.313 8.58121C32.3129 8.58121 32.3128 8.58112 32.3128 8.58112ZM29.8185 20.2188C29.8185 19.2088 28.9998 18.3901 27.9898 18.3901H22.5038V12.9041C22.5038 11.8942 21.6851 11.0755 20.6752 11.0755C19.6652 11.0755 18.8465 11.8942 18.8465 12.9041V18.3901H13.3605C12.3506 18.3901 11.5319 19.2088 11.5319 20.2188C11.5319 21.2287 12.3506 22.0474 13.3605 22.0474H18.8465V27.5334C18.8465 28.5434 19.6652 29.3621 20.6752 29.3621C21.6851 29.3621 22.5038 28.5434 22.5038 27.5334V22.0474H27.9898C28.9998 22.0474 29.8185 21.2287 29.8185 20.2188Z" fill="white"/>
+        </symbol>
+        <symbol id="bag" viewBox="0 0 21 20"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5 8.3334C20.5 8.27257 20.4933 8.21192 20.48 8.15257L19.3967 3.26257C19.1954 2.33444 18.6811 1.50372 17.9401 0.909721C17.1991 0.315721 16.2764 -0.00544699 15.3267 6.99074e-05H5.67334C4.72421 -0.00468034 3.80228 0.316838 3.06194 0.910775C2.32161 1.50471 1.80783 2.335 1.60667 3.26257L0.520001 8.15257C0.506675 8.21192 0.499967 8.27257 0.500001 8.3334V9.16674C0.499329 9.97807 0.795769 10.7616 1.33333 11.3692V15.8334C1.33466 16.9381 1.77407 17.9971 2.55518 18.7782C3.3363 19.5593 4.39534 19.9987 5.5 20.0001H15.5C16.6047 19.9987 17.6637 19.5593 18.4448 18.7782C19.2259 17.9971 19.6653 16.9381 19.6667 15.8334V11.3692C20.2042 10.7616 20.5007 9.97807 20.5 9.16674V8.3334ZM2.16667 8.42424L3.23333 3.62424C3.3542 3.06778 3.66252 2.56972 4.10668 2.21338C4.55084 1.85705 5.10391 1.66407 5.67334 1.66674H6.33333V4.16674C6.33333 4.38775 6.42113 4.59971 6.57741 4.75599C6.73369 4.91227 6.94565 5.00007 7.16667 5.00007C7.38768 5.00007 7.59964 4.91227 7.75592 4.75599C7.9122 4.59971 8 4.38775 8 4.16674V1.66674H13V4.16674C13 4.38775 13.0878 4.59971 13.2441 4.75599C13.4004 4.91227 13.6123 5.00007 13.8333 5.00007C14.0543 5.00007 14.2663 4.91227 14.4226 4.75599C14.5789 4.59971 14.6667 4.38775 14.6667 4.16674V1.66674H15.3267C15.8961 1.66407 16.4492 1.85705 16.8933 2.21338C17.3375 2.56972 17.6458 3.06778 17.7667 3.62424L18.8333 8.42424V9.16674C18.8333 9.60877 18.6577 10.0327 18.3452 10.3452C18.0326 10.6578 17.6087 10.8334 17.1667 10.8334H16.3333C15.8913 10.8334 15.4674 10.6578 15.1548 10.3452C14.8423 10.0327 14.6667 9.60877 14.6667 9.16674C14.6667 8.94572 14.5789 8.73376 14.4226 8.57748C14.2663 8.4212 14.0543 8.3334 13.8333 8.3334C13.6123 8.3334 13.4004 8.4212 13.2441 8.57748C13.0878 8.73376 13 8.94572 13 9.16674C13 9.60877 12.8244 10.0327 12.5118 10.3452C12.1993 10.6578 11.7754 10.8334 11.3333 10.8334H9.66667C9.22464 10.8334 8.80072 10.6578 8.48816 10.3452C8.1756 10.0327 8 9.60877 8 9.16674C8 8.94572 7.9122 8.73376 7.75592 8.57748C7.59964 8.4212 7.38768 8.3334 7.16667 8.3334C6.94565 8.3334 6.73369 8.4212 6.57741 8.57748C6.42113 8.73376 6.33333 8.94572 6.33333 9.16674C6.33333 9.60877 6.15774 10.0327 5.84518 10.3452C5.53262 10.6578 5.1087 10.8334 4.66667 10.8334H3.83333C3.39131 10.8334 2.96738 10.6578 2.65482 10.3452C2.34226 10.0327 2.16667 9.60877 2.16667 9.16674V8.42424ZM15.5 18.3334H5.5C4.83696 18.3334 4.20108 18.07 3.73223 17.6012C3.26339 17.1323 3 16.4964 3 15.8334V12.3942C3.27217 12.4647 3.55219 12.5003 3.83333 12.5001H4.66667C5.13985 12.5003 5.60763 12.3996 6.03875 12.2046C6.46988 12.0095 6.85442 11.7248 7.16667 11.3692C7.47892 11.7248 7.86346 12.0095 8.29458 12.2046C8.72571 12.3996 9.19349 12.5003 9.66667 12.5001H11.3333C11.8065 12.5003 12.2743 12.3996 12.7054 12.2046C13.1365 12.0095 13.5211 11.7248 13.8333 11.3692C14.1456 11.7248 14.5301 12.0095 14.9612 12.2046C15.3924 12.3996 15.8602 12.5003 16.3333 12.5001H17.1667C17.4478 12.5003 17.7278 12.4647 18 12.3942V15.8334C18 16.4964 17.7366 17.1323 17.2678 17.6012C16.7989 18.07 16.163 18.3334 15.5 18.3334Z" />
+        </symbol>
+        <symbol id="megafon" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.0506 0C14.8296 0 14.6176 0.0877974 14.4613 0.244078C14.305 0.400358 14.2172 0.61232 14.2172 0.833333C14.2172 3.29083 12.0647 4.16667 10.0506 4.16667H4.21724C3.33319 4.16667 2.48534 4.51786 1.86022 5.14298C1.2351 5.7681 0.883911 6.61594 0.883911 7.5L0.883911 9.16667C0.885731 9.66561 1.00013 10.1577 1.21858 10.6063C1.43703 11.0549 1.7539 11.4484 2.14558 11.7575L5.12224 18.4008C5.33394 18.8767 5.67906 19.2811 6.1158 19.5649C6.55255 19.8487 7.06221 19.9998 7.58308 20C7.9975 19.9997 8.40528 19.8958 8.7693 19.6977C9.13332 19.4996 9.44201 19.2137 9.66728 18.8658C9.89256 18.518 10.0273 18.1193 10.0591 17.7061C10.091 17.2929 10.019 16.8783 9.84975 16.5L8.01641 12.5H10.0506C12.0647 12.5 14.2172 13.3758 14.2172 15.8333C14.2172 16.0543 14.305 16.2663 14.4613 16.4226C14.6176 16.5789 14.8296 16.6667 15.0506 16.6667C15.2716 16.6667 15.4836 16.5789 15.6398 16.4226C15.7961 16.2663 15.8839 16.0543 15.8839 15.8333V0.833333C15.8839 0.61232 15.7961 0.400358 15.6398 0.244078C15.4836 0.0877974 15.2716 0 15.0506 0V0ZM8.33141 17.1825C8.38661 17.3072 8.40982 17.4436 8.39895 17.5795C8.38807 17.7154 8.34346 17.8464 8.26914 17.9607C8.19482 18.075 8.09315 18.169 7.97335 18.234C7.85355 18.2991 7.71941 18.3332 7.58308 18.3333C7.38424 18.3332 7.18972 18.2753 7.02315 18.1667C6.85658 18.0582 6.72512 17.9035 6.64475 17.7217L4.30474 12.5H6.18308L8.33141 17.1825ZM14.2172 12.1667C13.0267 11.2493 11.5526 10.7776 10.0506 10.8333H4.21724C3.77522 10.8333 3.35129 10.6577 3.03873 10.3452C2.72617 10.0326 2.55058 9.60869 2.55058 9.16667V7.5C2.55058 7.05797 2.72617 6.63405 3.03873 6.32149C3.35129 6.00893 3.77522 5.83333 4.21724 5.83333H10.0506C11.552 5.89025 13.0261 5.42002 14.2172 4.50417V12.1667ZM20.8006 12.8767C20.7517 12.9746 20.684 13.062 20.6013 13.1338C20.5186 13.2056 20.4226 13.2604 20.3188 13.2951C20.2149 13.3298 20.1052 13.3436 19.996 13.3359C19.8868 13.3281 19.7802 13.299 19.6822 13.25L18.0156 12.4167C17.8178 12.3179 17.6673 12.1445 17.5973 11.9348C17.5273 11.7251 17.5435 11.4961 17.6422 11.2983C17.741 11.1005 17.9144 10.9501 18.1241 10.8801C18.3338 10.81 18.5628 10.8262 18.7606 10.925L20.4272 11.7583C20.624 11.8571 20.7738 12.0297 20.8437 12.2384C20.9137 12.4472 20.8982 12.6751 20.8006 12.8725V12.8767ZM17.6422 5.37667C17.5933 5.27873 17.5641 5.17211 17.5564 5.06289C17.5486 4.95367 17.5625 4.84399 17.5972 4.74013C17.6318 4.63628 17.6866 4.54027 17.7584 4.4576C17.8302 4.37493 17.9176 4.30722 18.0156 4.25833L19.6822 3.425C19.8801 3.32621 20.109 3.31004 20.3187 3.38005C20.5285 3.45007 20.7018 3.60053 20.8006 3.79833C20.8994 3.99614 20.9155 4.22509 20.8455 4.43482C20.7755 4.64455 20.6251 4.81787 20.4272 4.91667L18.7606 5.75C18.6626 5.79896 18.556 5.82815 18.4468 5.83588C18.3376 5.84362 18.2279 5.82976 18.124 5.79508C18.0202 5.76041 17.9242 5.70561 17.8415 5.63382C17.7588 5.56203 17.6911 5.47464 17.6422 5.37667ZM17.5506 8.33333C17.5506 8.11232 17.6384 7.90036 17.7947 7.74408C17.9509 7.5878 18.1629 7.5 18.3839 7.5H20.0506C20.2716 7.5 20.4836 7.5878 20.6398 7.74408C20.7961 7.90036 20.8839 8.11232 20.8839 8.33333C20.8839 8.55435 20.7961 8.76631 20.6398 8.92259C20.4836 9.07887 20.2716 9.16667 20.0506 9.16667H18.3839C18.1629 9.16667 17.9509 9.07887 17.7947 8.92259C17.6384 8.76631 17.5506 8.55435 17.5506 8.33333Z" />
+        </symbol>
+    
+        <symbol id="rec" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 3C0 1.34315 1.34315 0 3 0H8.14815C9.04731 0 9.77623 0.728911 9.77623 1.62807C9.77623 2.52723 9.04731 3.25614 8.14816 3.25614H6.89751C5.30764 3.25614 4.0188 4.54498 4.0188 6.13485V17.8651C4.0188 19.455 5.30764 20.7439 6.89751 20.7439H8.14816C9.04732 20.7439 9.77623 21.4728 9.77623 22.3719C9.77623 23.2711 9.04731 24 8.14816 24H3C1.34315 24 0 22.6569 0 21V3Z" fill="#EA4256"/>
+            <path d="M35 0C36.6569 0 38 1.34315 38 3V21C38 22.6569 36.6569 24 35 24H29.8518C28.9527 24 28.2238 23.2711 28.2238 22.3719C28.2238 21.4728 28.9527 20.7439 29.8518 20.7439H31.1025C32.6924 20.7439 33.9812 19.455 33.9812 17.8651V6.13485C33.9812 4.54498 32.6924 3.25614 31.1025 3.25614H29.8518C28.9527 3.25614 28.2238 2.52723 28.2238 1.62807C28.2238 0.728911 28.9527 0 29.8518 0H35Z" fill="#EA4256"/>
+            <path d="M24.2743 11.9922C24.2743 15.0066 21.793 17.4503 18.7322 17.4503C15.6714 17.4503 13.1901 15.0066 13.1901 11.9922C13.1901 8.97778 15.6714 6.53411 18.7322 6.53411C21.793 6.53411 24.2743 8.97778 24.2743 11.9922Z" fill="#EA4256"/>
+        </symbol>
+        <symbol id="curve"  viewBox="0 0 100 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#curve_d_396_2638)">
+                <path d="M15 32C15 32 23.0909 21.2667 35.4545 24.3334C50.9091 28.1667 55 33.9167 62.7273 24.3334C70.4545 14.75 73.6364 9 85 9" stroke="#EA4256" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            <defs>
+                <filter id="curve_d_396_2638" x="-0.00012207" y="0" width="100" height="53.0001" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="6"/>
+                    <feGaussianBlur stdDeviation="6.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.917647 0 0 0 0 0.258824 0 0 0 0 0.337255 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_396_2638"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_396_2638" result="shape"/>
+                </filter>
+            </defs>
+        </symbol>
+    
+        <symbol id="switch" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.977539" y="0.0626221" width="23.1642" height="44.8339" rx="6.72509" fill="url(#switch_linear_513_273)"/>
+            <path d="M7.70264 17.2489H17.4167V18.7434H7.70264V17.2489Z" fill="#BBC1C9" fill-opacity="0.5"/>
+            <path d="M7.70264 21.7323H17.4167V23.2268H7.70264V21.7323Z" fill="#BBC1C9" fill-opacity="0.5"/>
+            <path d="M7.70264 26.2157H17.4167V27.7102H7.70264V26.2157Z" fill="#BBC1C9" fill-opacity="0.5"/>
+            <defs>
+                <linearGradient id="switch_linear_513_273" x1="12.5596" y1="0.0626221" x2="12.186" y2="54.237" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white"/>
+                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+        </symbol>
+        <symbol id="star" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.8979 0C20.3016 13.4845 24.4619 17.6085 37.7959 18.898C24.6912 20.4105 20.6217 24.6323 18.8979 37.796C17.9574 24.376 13.8758 20.1843 -3.64675e-05 18.898C13.1383 17.8158 17.3585 13.7593 18.8979 0Z" fill="#EA4256"/>
+        </symbol>
+        <symbol id="cart" viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.41667 22.5C7.42919 22.5 8.25 21.6792 8.25 20.6667C8.25 19.6541 7.42919 18.8333 6.41667 18.8333C5.40414 18.8333 4.58333 19.6541 4.58333 20.6667C4.58333 21.6792 5.40414 22.5 6.41667 22.5Z" />
+            <path d="M15.5833 22.5C16.5959 22.5 17.4167 21.6792 17.4167 20.6667C17.4167 19.6541 16.5959 18.8333 15.5833 18.8333C14.5708 18.8333 13.75 19.6541 13.75 20.6667C13.75 21.6792 14.5708 22.5 15.5833 22.5Z" />
+            <path d="M21.0833 3.25H19.25V1.41667C19.25 1.17355 19.1534 0.940394 18.9815 0.768485C18.8096 0.596577 18.5765 0.5 18.3333 0.5C18.0902 0.5 17.8571 0.596577 17.6852 0.768485C17.5132 0.940394 17.4167 1.17355 17.4167 1.41667V3.25H15.5833C15.3402 3.25 15.1071 3.34658 14.9352 3.51849C14.7632 3.69039 14.6667 3.92355 14.6667 4.16667C14.6667 4.40978 14.7632 4.64294 14.9352 4.81485C15.1071 4.98676 15.3402 5.08333 15.5833 5.08333H17.4167V6.91667C17.4167 7.15978 17.5132 7.39294 17.6852 7.56485C17.8571 7.73676 18.0902 7.83333 18.3333 7.83333C18.5765 7.83333 18.8096 7.73676 18.9815 7.56485C19.1534 7.39294 19.25 7.15978 19.25 6.91667V5.08333H21.0833C21.3265 5.08333 21.5596 4.98676 21.7315 4.81485C21.9034 4.64294 22 4.40978 22 4.16667C22 3.92355 21.9034 3.69039 21.7315 3.51849C21.5596 3.34658 21.3265 3.25 21.0833 3.25Z" />
+            <path d="M19.9568 9.4155C19.8382 9.39332 19.7165 9.39489 19.5986 9.42011C19.4807 9.44533 19.3689 9.49371 19.2698 9.56243C19.1708 9.63116 19.0863 9.71886 19.0214 9.82047C18.9565 9.92207 18.9123 10.0356 18.8916 10.1543C18.7773 10.7888 18.4437 11.3629 17.949 11.7765C17.4544 12.19 16.8303 12.4166 16.1856 12.4167H4.9665L4.10483 5.08333H11.9167C12.1598 5.08333 12.3929 4.98676 12.5648 4.81485C12.7368 4.64294 12.8333 4.40978 12.8333 4.16667C12.8333 3.92355 12.7368 3.69039 12.5648 3.51849C12.3929 3.34658 12.1598 3.25 11.9167 3.25H3.8885L3.85 2.92733C3.771 2.25872 3.44947 1.64231 2.94634 1.19493C2.44321 0.74755 1.79343 0.500287 1.12017 0.5H0.916667C0.673552 0.5 0.440394 0.596577 0.268485 0.768486C0.0965771 0.940394 0 1.17355 0 1.41667C0 1.65978 0.0965771 1.89294 0.268485 2.06485C0.440394 2.23676 0.673552 2.33333 0.916667 2.33333H1.12017C1.34469 2.33336 1.56139 2.41579 1.72917 2.56499C1.89696 2.71419 2.00415 2.91977 2.03042 3.14275L3.29175 13.8678C3.4227 14.9831 3.9586 16.0116 4.79775 16.758C5.63689 17.5044 6.72087 17.9167 7.84392 17.9167H17.4167C17.6598 17.9167 17.8929 17.8201 18.0648 17.6482C18.2368 17.4763 18.3333 17.2431 18.3333 17C18.3333 16.7569 18.2368 16.5237 18.0648 16.3518C17.8929 16.1799 17.6598 16.0833 17.4167 16.0833H7.84392C7.27514 16.0834 6.72033 15.9072 6.25589 15.5789C5.79146 15.2505 5.44026 14.7862 5.25067 14.25H16.1856C17.2601 14.2501 18.3004 13.8727 19.1249 13.1838C19.9494 12.4948 20.5057 11.5381 20.6965 10.4807C20.7179 10.3622 20.7158 10.2406 20.6902 10.1229C20.6646 10.0052 20.616 9.89372 20.5473 9.7948C20.4786 9.69588 20.3911 9.61146 20.2898 9.54638C20.1885 9.4813 20.0753 9.43683 19.9568 9.4155Z" />
+        </symbol>
+    
+        <symbol id="tariff-ell-1" viewBox="0 0 184 157" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40.0601 4.15394C35.7572 -0.886711 28.1134 -1.53148 23.6752 3.39044C14.2512 13.8417 7.31302 26.3585 3.46065 40.0043C-1.48303 57.5158 -1.12294 76.0999 4.49537 93.4067C10.1137 110.713 20.7379 125.966 35.0245 137.234C49.3111 148.503 66.6184 155.282 84.7578 156.715C102.897 158.147 121.054 154.168 136.932 145.281C152.81 136.395 165.697 122.999 173.962 106.789C182.227 90.5781 185.499 72.2808 183.365 54.2104C181.702 40.1291 176.815 26.6785 169.148 14.8776C165.537 9.32015 157.887 8.75722 152.846 13.0601L129.124 33.3098C124.083 37.6126 123.715 45.1726 126.176 51.3258C127.371 54.3109 128.175 57.4555 128.557 60.6829C129.41 67.9131 128.101 75.2342 124.794 81.7202C121.487 88.2063 116.331 93.566 109.978 97.1217C103.625 100.677 96.3601 102.269 89.1023 101.696C81.8444 101.123 74.9195 98.4107 69.2033 93.902C63.487 89.3932 59.2361 83.2906 56.9881 76.3659C54.7402 69.4412 54.5961 62.0054 56.5741 54.9989C57.4571 51.8713 58.7452 48.8919 60.3933 46.1312C63.7905 40.4407 64.6127 32.9165 60.3098 27.8759L40.0601 4.15394Z" fill="#F9EAB8"/>
+        </symbol>
+        <symbol id="tariff-ell-2" viewBox="0 0 40 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.865908 33.2545C-0.245793 34.483 -0.160187 36.3979 1.19678 37.3486C5.56481 40.4088 10.852 41.9515 16.235 41.6828C22.6224 41.3639 28.6215 38.5207 32.9126 33.7787C37.2037 29.0366 39.4353 22.7841 39.1164 16.3967C38.8477 11.0137 36.7861 5.90649 33.3061 1.86495C32.225 0.609417 30.3111 0.714951 29.1994 1.94348L24.5484 7.08327C23.4367 8.3118 23.5751 10.1956 24.465 11.5932C25.497 13.2141 26.1033 15.0887 26.2008 17.0415C26.3486 20.0034 25.3138 22.9028 23.3239 25.1018C21.3341 27.3008 18.5521 28.6192 15.5902 28.7671C13.6374 28.8646 11.7118 28.448 9.99616 27.5826C8.51686 26.8364 6.62862 26.8862 5.51692 28.1147L0.865908 33.2545Z" fill="#8FD97D"/>
+        </symbol>
+        <symbol id="check"  viewBox="0 0 23 17"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.42631 17C6.77343 17.0003 6.14729 16.7346 5.68603 16.2615L0.4246 10.8764C-0.141533 10.2965 -0.141533 9.35661 0.4246 8.77677C0.990914 8.19711 1.90891 8.19711 2.47522 8.77677L7.42631 13.8461L20.5248 0.434743C21.0911 -0.144914 22.0091 -0.144914 22.5754 0.434743C23.1415 1.01459 23.1415 1.95451 22.5754 2.53436L9.16658 16.2615C8.70532 16.7346 8.07918 17.0003 7.42631 17Z" />
+        </symbol>
+        <symbol id="cross" viewBox="0 0 17 17"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.8995 1.4245L8.84924 6.37425L13.799 1.4245C14.1272 1.09631 14.5723 0.911938 15.0364 0.911938C15.5006 0.911938 15.9457 1.09631 16.2739 1.4245C16.6021 1.75269 16.7864 2.19781 16.7864 2.66194C16.7864 3.12607 16.6021 3.57119 16.2739 3.89937L11.3241 8.84912L16.2739 13.7989C16.6021 14.1271 16.7864 14.5722 16.7864 15.0363C16.7864 15.5004 16.6021 15.9456 16.2739 16.2737C15.9457 16.6019 15.5006 16.7863 15.0364 16.7863C14.5723 16.7863 14.1272 16.6019 13.799 16.2737L8.84924 11.324L3.8995 16.2737C3.57131 16.6019 3.12619 16.7863 2.66206 16.7863C2.19793 16.7863 1.75281 16.6019 1.42462 16.2737C1.09644 15.9456 0.91206 15.5004 0.91206 15.0363C0.912059 14.5722 1.09644 14.1271 1.42462 13.7989L6.37437 8.84912L1.42462 3.89938C1.09643 3.57119 0.912058 3.12607 0.912059 2.66194C0.912059 2.19781 1.09643 1.75269 1.42462 1.4245C1.75281 1.09631 2.19793 0.911938 2.66206 0.911938C3.12619 0.911937 3.57131 1.09631 3.8995 1.4245Z" />
+        </symbol>
+        <symbol id="cross-thin" viewBox="0 0 23 22" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.824789 0.268392C0.996693 0.0965408 1.22981 0 1.47289 0C1.71596 0 1.94908 0.0965408 2.12098 0.268392L11.5564 9.70381L20.9918 0.268392C21.1637 0.0965408 21.3968 0 21.6399 0C21.883 0 22.1161 0.0965408 22.288 0.268392C22.4599 0.440296 22.5564 0.673416 22.5564 0.916487C22.5564 1.15956 22.4599 1.39268 22.288 1.56458L12.8526 11L22.288 20.4354C22.4599 20.6073 22.5564 20.8404 22.5564 21.0835C22.5564 21.3266 22.4599 21.5597 22.288 21.7316C22.1161 21.9035 21.883 22 21.6399 22C21.3968 22 21.1637 21.9035 20.9918 21.7316L11.5564 12.2962L2.12098 21.7316C1.94908 21.9035 1.71596 22 1.47289 22C1.22981 22 0.996693 21.9035 0.824789 21.7316C0.652937 21.5597 0.556396 21.3266 0.556396 21.0835C0.556396 20.8404 0.652937 20.6073 0.824789 20.4354L10.2602 11L0.824789 1.56458C0.652937 1.39268 0.556396 1.15956 0.556396 0.916487C0.556396 0.673416 0.652937 0.440296 0.824789 0.268392Z" />
+        </symbol>
+    
+    
+        <symbol id="arrow-top" viewBox="0 0 16 9" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.81784 0.866275C7.52158 0.350578 8.47841 0.350578 9.18216 0.866274L14.3276 4.63677C15.887 5.7795 15.0787 8.25 13.1454 8.25H2.8546C0.921307 8.25 0.113023 5.7795 1.67245 4.63677L6.81784 0.866275Z" />
+        </symbol>
+        <symbol id="arrow-bottom" viewBox="0 0 16 9"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.81784 8.13372C7.52158 8.64942 8.47841 8.64942 9.18216 8.13373L14.3276 4.36323C15.887 3.2205 15.0787 0.75 13.1454 0.75H2.8546C0.921307 0.75 0.113023 3.2205 1.67245 4.36323L6.81784 8.13372Z" />
+        </symbol>
+        <symbol id="ussr" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.405799 8.06431L4.50313 11.5375L3.22883 16.76C2.97852 17.7341 4.05341 18.5336 4.92748 17.9842L9.50007 15.1601L14.0725 17.9837C14.9223 18.5079 15.9963 17.7339 15.7713 16.7593L14.4968 11.5374L18.5947 8.06396C19.3687 7.41448 18.9692 6.14018 17.9451 6.06514L12.5729 5.6651L10.5492 0.69334C10.1746 -0.231113 8.85024 -0.231113 8.4502 0.69334L6.42655 5.66527L1.05457 6.06532C0.0309438 6.16573 -0.369103 7.41483 0.405799 8.06431Z" fill="#EA4256"/>
+        </symbol>
+        <symbol id="hands" viewBox="0 0 44 38"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M41.7084 23.5022H40.5134C40.0655 23.5022 39.6212 23.5364 39.1787 23.6049L26.5551 14.0854L29.5793 11.1741C30.2942 10.4859 30.3193 9.34371 29.6349 8.62669C28.9487 7.90786 27.8128 7.88444 27.1016 8.57084L19.6252 15.7681C19.2526 16.1428 18.7456 16.3356 18.2135 16.2905C17.6796 16.2473 17.2102 15.9753 16.8895 15.5249C16.3986 14.8403 16.5491 13.7683 17.1905 13.1216L25.6163 5.14247C27.2126 3.63456 29.7083 3.26524 31.6612 4.25069L35.8105 6.3369C37.0467 6.95844 38.4334 7.28632 39.8147 7.28632H41.7066C42.6974 7.28632 43.4982 6.48103 43.4982 5.48476C43.4982 4.4885 42.6974 3.6832 41.7066 3.6832H39.8147C38.9852 3.6832 38.1521 3.48683 37.4104 3.11391L33.2646 1.0277C29.9968 -0.617126 25.8242 -0.00639679 23.1583 2.51939L22.0511 3.5679L20.7969 2.4185C19.1505 0.910598 17.0185 0.0800781 14.7234 0.0800781C13.3421 0.0800781 11.9644 0.407962 10.7336 1.0259L6.58783 3.11211C5.84432 3.48503 5.01123 3.6814 4.18172 3.6814H2.29338C1.30263 3.6814 0.501792 4.4867 0.501792 5.48296C0.501792 6.47923 1.30263 7.28452 2.29338 7.28452H4.1853C5.56662 7.28452 6.95331 6.95484 8.1913 6.3351L12.3406 4.24889C14.1716 3.32289 16.7444 3.57331 18.3855 5.08121L19.4371 6.04505L14.6966 10.5345C12.7742 12.4658 12.4678 15.5195 13.9835 17.6291C14.9151 18.9316 16.7659 19.8973 18.3622 19.8973C19.7829 19.8973 21.1463 19.3352 22.1317 18.3425L23.934 16.6076L35.3035 25.1812C35.2479 25.2209 24.1992 33.5513 24.1992 33.5513C22.9039 34.5638 21.0961 34.5638 19.7739 33.5315L8.86136 25.3019C7.32238 24.1399 5.41255 23.5004 3.48658 23.5004H2.29159C1.30084 23.5004 0.5 24.3057 0.5 25.3019C0.5 26.2982 1.30084 27.1035 2.29159 27.1035H3.48658C4.64216 27.1035 5.78699 27.4872 6.71145 28.1844L17.599 36.396C18.8979 37.412 20.4548 37.9201 22.0081 37.9201C23.5524 37.9201 25.095 37.4174 26.3742 36.4158L37.2903 28.1862C38.213 27.489 39.3578 27.1053 40.5134 27.1053H41.7084C42.6992 27.1053 43.5 26.3 43.5 25.3037C43.5 24.3075 42.6992 23.5022 41.7084 23.5022Z" />
+        </symbol>
+    
+        <symbol id="eye" viewBox="0 0 44 34"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M42.1939 12.3757C39.415 7.84992 33.094 0.256836 22 0.256836C10.906 0.256836 4.58503 7.84992 1.80616 12.3757C0.947102 13.7651 0.492065 15.3664 0.492065 17C0.492065 18.6335 0.947102 20.2348 1.80616 21.6243C4.58503 26.15 10.906 33.7431 22 33.7431C33.094 33.7431 39.415 26.15 42.1939 21.6243C43.053 20.2348 43.508 18.6335 43.508 17C43.508 15.3664 43.053 13.7651 42.1939 12.3757ZM39.1391 19.7484C36.7526 23.6291 31.3507 30.1598 22 30.1598C12.6493 30.1598 7.24745 23.6291 4.86095 19.7484C4.35057 18.9225 4.08023 17.9708 4.08023 17C4.08023 16.0291 4.35057 15.0774 4.86095 14.2515C7.24745 10.3708 12.6493 3.84017 22 3.84017C31.3507 3.84017 36.7526 10.3636 39.1391 14.2515C39.6495 15.0774 39.9198 16.0291 39.9198 17C39.9198 17.9708 39.6495 18.9225 39.1391 19.7484Z" />
+            <path d="M22 8.04163C20.2282 8.04163 18.4962 8.56703 17.023 9.55138C15.5499 10.5357 14.4016 11.9348 13.7236 13.5718C13.0456 15.2087 12.8682 17.0099 13.2138 18.7476C13.5595 20.4854 14.4127 22.0816 15.6655 23.3345C16.9184 24.5873 18.5146 25.4405 20.2523 25.7862C21.9901 26.1318 23.7913 25.9544 25.4282 25.2764C27.0652 24.5983 28.4643 23.4501 29.4486 21.9769C30.433 20.5038 30.9584 18.7718 30.9584 17C30.9555 14.6249 30.0108 12.348 28.3314 10.6686C26.652 8.98921 24.3751 8.04447 22 8.04163ZM22 22.375C20.937 22.375 19.8978 22.0597 19.0138 21.4691C18.1299 20.8785 17.441 20.039 17.0342 19.0569C16.6274 18.0747 16.5209 16.994 16.7283 15.9514C16.9357 14.9087 17.4476 13.951 18.1993 13.1993C18.951 12.4476 19.9088 11.9356 20.9514 11.7282C21.9941 11.5208 23.0748 11.6273 24.057 12.0341C25.0391 12.4409 25.8786 13.1299 26.4692 14.0138C27.0598 14.8977 27.375 15.9369 27.375 17C27.375 18.4255 26.8087 19.7927 25.8007 20.8007C24.7927 21.8087 23.4256 22.375 22 22.375Z" />
+        </symbol>
+    
+        <symbol id="login" viewBox="0 0 17 17"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.915 8.29445L14.8281 9.3813C14.2025 10.0015 13.2557 9.05403 13.8759 8.42912L14.7466 7.55843H9.09149C8.2107 7.55439 8.21137 6.21501 9.09149 6.21165H14.7466L13.8759 5.34095C13.2557 4.71604 14.2032 3.76858 14.8281 4.38878L15.915 5.47563C16.6921 6.25272 16.6921 7.51735 15.915 8.29512V8.29445ZM13.8052 10.9254V12.9456C13.8052 14.8021 12.2948 16.3125 10.4383 16.3125H3.03097C1.54547 16.3125 0.337402 15.1045 0.337402 13.619V3.51808C0.337402 1.66154 1.84782 0.151123 3.70436 0.151123H10.4383C11.975 0.151123 13.3157 1.18949 13.6995 2.67634C13.7924 3.03661 13.5749 3.4036 13.2147 3.49653C12.8605 3.59081 12.4874 3.3733 12.3945 3.01236C12.1649 2.12012 11.3608 1.49723 10.4383 1.49723H4.37775V10.9247H12.4584C12.4625 10.0439 13.8019 10.0446 13.8052 10.9247V10.9254ZM1.68419 3.51808V11.2998C2.08216 11.0681 2.53805 10.9254 3.03097 10.9254V1.62181C2.24916 1.90059 1.68419 2.64132 1.68419 3.51808ZM12.4584 12.9456V12.2722H3.03097C1.26062 12.3038 1.26197 14.9341 3.03097 14.9657H10.4383C11.5521 14.9657 12.4584 14.0593 12.4584 12.9456Z" />
+        </symbol>
+    
+        <symbol id="dots" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.5 3.5C15.6716 3.5 15 2.82843 15 2C15 1.17157 15.6716 0.5 16.5 0.5C17.3284 0.5 18 1.17157 18 2C18 2.82843 17.3284 3.5 16.5 3.5Z" fill="black"/>
+            <path d="M9 3.5C8.17157 3.5 7.5 2.82843 7.5 2C7.5 1.17157 8.17157 0.5 9 0.5C9.82843 0.5 10.5 1.17157 10.5 2C10.5 2.82843 9.82843 3.5 9 3.5Z" fill="black"/>
+            <path d="M1.5 3.5C0.671573 3.5 0 2.82843 0 2C0 1.17157 0.671573 0.5 1.5 0.5C2.32843 0.5 3 1.17157 3 2C3 2.82843 2.32843 3.5 1.5 3.5Z" fill="black"/>
+        </symbol>
+        <symbol id="comrades" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.3125 9.20833C4.68207 9.20833 4.0658 9.02139 3.54162 8.67114C3.01744 8.3209 2.60889 7.82308 2.36763 7.24064C2.12638 6.6582 2.06326 6.0173 2.18625 5.39898C2.30924 4.78067 2.61282 4.21271 3.0586 3.76693C3.50438 3.32115 4.07234 3.01757 4.69065 2.89458C5.30896 2.77159 5.94986 2.83471 6.5323 3.07597C7.11474 3.31722 7.61256 3.72577 7.96281 4.24995C8.31306 4.77414 8.5 5.39041 8.5 6.02083C8.49906 6.86592 8.16294 7.67613 7.56537 8.2737C6.9678 8.87127 6.15759 9.2074 5.3125 9.20833ZM5.3125 4.25C4.96226 4.25 4.61989 4.35386 4.32868 4.54844C4.03747 4.74302 3.81049 5.01959 3.67646 5.34317C3.54243 5.66674 3.50736 6.0228 3.57569 6.36631C3.64402 6.70982 3.81268 7.02535 4.06033 7.273C4.30799 7.52066 4.62352 7.68931 4.96703 7.75764C5.31054 7.82597 5.66659 7.7909 5.99017 7.65687C6.31375 7.52284 6.59031 7.29587 6.78489 7.00466C6.97948 6.71345 7.08333 6.37107 7.08333 6.02083C7.08333 5.55118 6.89676 5.10076 6.56467 4.76867C6.23257 4.43657 5.78215 4.25 5.3125 4.25ZM10.625 16.2917V15.9375C10.625 14.5285 10.0653 13.1773 9.069 12.181C8.07272 11.1847 6.72146 10.625 5.3125 10.625C3.90354 10.625 2.55228 11.1847 1.556 12.181C0.559708 13.1773 0 14.5285 0 15.9375L0 16.2917C0 16.4795 0.0746278 16.6597 0.207466 16.7925C0.340304 16.9254 0.520472 17 0.708333 17C0.896195 17 1.07636 16.9254 1.2092 16.7925C1.34204 16.6597 1.41667 16.4795 1.41667 16.2917V15.9375C1.41667 14.9043 1.82712 13.9133 2.55773 13.1827C3.28834 12.4521 4.27926 12.0417 5.3125 12.0417C6.34574 12.0417 7.33666 12.4521 8.06727 13.1827C8.79788 13.9133 9.20833 14.9043 9.20833 15.9375V16.2917C9.20833 16.4795 9.28296 16.6597 9.4158 16.7925C9.54864 16.9254 9.7288 17 9.91667 17C10.1045 17 10.2847 16.9254 10.4175 16.7925C10.5504 16.6597 10.625 16.4795 10.625 16.2917ZM17 12.75C17 11.7928 16.7229 10.8561 16.2022 10.0529C15.6815 9.24975 14.9395 8.61446 14.0657 8.22373C13.1919 7.833 12.2237 7.70354 11.2779 7.85098C10.3321 7.99842 9.44928 8.41646 8.73588 9.05463C8.66558 9.11639 8.60823 9.19147 8.56712 9.27553C8.52601 9.35959 8.50197 9.45096 8.49637 9.54437C8.49078 9.63777 8.50375 9.73136 8.53453 9.81973C8.56531 9.90809 8.61329 9.98948 8.67571 10.0592C8.73812 10.1289 8.81373 10.1856 8.89817 10.2259C8.98261 10.2662 9.0742 10.2894 9.16765 10.2941C9.2611 10.2989 9.35457 10.285 9.44264 10.2534C9.53072 10.2218 9.61166 10.1731 9.68079 10.11C10.1904 9.65431 10.821 9.35582 11.4965 9.2506C12.172 9.14537 12.8636 9.2379 13.4877 9.51703C14.1117 9.79615 14.6417 10.2499 15.0136 10.8236C15.3854 11.3973 15.5833 12.0663 15.5833 12.75C15.5833 12.9379 15.658 13.118 15.7908 13.2509C15.9236 13.3837 16.1038 13.4583 16.2917 13.4583C16.4795 13.4583 16.6597 13.3837 16.7925 13.2509C16.9254 13.118 17 12.9379 17 12.75ZM12.3958 6.375C11.7654 6.375 11.1491 6.18806 10.625 5.83781C10.1008 5.48756 9.69222 4.98974 9.45097 4.40731C9.20971 3.82487 9.14659 3.18397 9.26958 2.56565C9.39257 1.94734 9.69615 1.37938 10.1419 0.933599C10.5877 0.487819 11.1557 0.184239 11.774 0.0612484C12.3923 -0.061742 13.0332 0.0013811 13.6156 0.242635C14.1981 0.48389 14.6959 0.89244 15.0461 1.41662C15.3964 1.9408 15.5833 2.55707 15.5833 3.1875C15.5824 4.03259 15.2463 4.8428 14.6487 5.44037C14.0511 6.03794 13.2409 6.37406 12.3958 6.375ZM12.3958 1.41667C12.0456 1.41667 11.7032 1.52053 11.412 1.71511C11.1208 1.90969 10.8938 2.18626 10.7598 2.50983C10.6258 2.83341 10.5907 3.18947 10.659 3.53297C10.7274 3.87648 10.896 4.19201 11.1437 4.43967C11.3913 4.68733 11.7069 4.85598 12.0504 4.92431C12.3939 4.99264 12.7499 4.95757 13.0735 4.82354C13.3971 4.68951 13.6736 4.46254 13.8682 4.17132C14.0628 3.88011 14.1667 3.53774 14.1667 3.1875C14.1667 2.71785 13.9801 2.26743 13.648 1.93533C13.3159 1.60324 12.8655 1.41667 12.3958 1.41667Z" fill="white"/>
+        </symbol>
+    
+    
+    </svg>   <script src="assets/js/app.js"></script>
+</body>
+</html>
