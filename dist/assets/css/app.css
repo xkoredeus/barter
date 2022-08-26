@@ -6878,6 +6878,7 @@ html.fixed, body.fixed {
 @media only screen and (max-width: 768px) {
   .work-switch {
     width: 33px;
+    min-width: 33px;
     padding: 4.5px;
   }
 }
@@ -7927,6 +7928,18 @@ html.fixed, body.fixed {
           flex-direction: column;
 }
 
+@media only screen and (max-width: 1200px) {
+  .material__info {
+    padding: 24px 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .material__info {
+    padding: 20px 28px;
+  }
+}
+
 .material__info::before {
   content: '';
   position: absolute;
@@ -8241,6 +8254,14 @@ html.fixed, body.fixed {
   }
 }
 
+@media only screen and (max-width: 426px) {
+  .menu__in {
+    padding: 20px 25px 25px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+
 .menu__close {
   position: absolute;
   left: 40px;
@@ -8254,6 +8275,12 @@ html.fixed, body.fixed {
   .menu__close {
     position: static;
     margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .menu__close {
+    margin-bottom: 15px;
   }
 }
 
@@ -8306,6 +8333,12 @@ html.fixed, body.fixed {
   }
 }
 
+@media only screen and (max-width: 426px) {
+  .menu__link {
+    font-size: 17px;
+  }
+}
+
 .menu__link:not(:last-child) {
   margin-bottom: 18px;
 }
@@ -8313,6 +8346,12 @@ html.fixed, body.fixed {
 @media only screen and (max-width: 1200px) {
   .menu__link:not(:last-child) {
     margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .menu__link:not(:last-child) {
+    margin-bottom: 6px;
   }
 }
 
@@ -8348,6 +8387,13 @@ html.fixed, body.fixed {
 @media only screen and (max-width: 1200px) {
   .menu-tel__wrapper {
     padding: 15px 10px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .menu-tel__wrapper {
+    padding: 10px 5px;
+    margin: 18px auto;
   }
 }
 
@@ -8405,6 +8451,14 @@ html.fixed, body.fixed {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 25px;
     row-gap: 25px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .menu__buttons {
+    gap: 12px;
+    margin-bottom: 18px;
+    row-gap: 18px;
   }
 }
 

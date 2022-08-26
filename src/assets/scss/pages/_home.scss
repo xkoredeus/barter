@@ -610,6 +610,7 @@
 
   @include r(768) {
     width: 33px;
+    min-width: 33px;
     padding: 4.5px;
   }
 
@@ -1492,6 +1493,14 @@
     padding: 30px 40px 40px;
     display: flex;
     flex-direction: column;
+
+    @include r(1200) {
+      padding: 24px 32px;
+    }
+
+    @include r(768) {
+      padding: 20px 28px;
+    }
 
     &::before {
       @include ovl;

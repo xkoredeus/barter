@@ -203,6 +203,12 @@
       border-bottom-left-radius: 50px;
       border-bottom-right-radius: 50px;
     }
+
+    @include r(426) {
+      padding: 20px 25px 25px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
   }
 
   &__close {
@@ -216,6 +222,9 @@
     @include r(768) {
       position: static;
       margin-bottom: 30px;
+    }
+    @include r(426) {
+      margin-bottom: 15px;
     }
 
     svg,
@@ -261,11 +270,19 @@
       font-size: 21px;
     }
 
+    @include r(426) {
+      font-size: 17px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 18px;
 
       @include r(1200) {
         margin-bottom: 10px;
+      }
+
+      @include r(426) {
+        margin-bottom: 6px;
       }
     }
 
@@ -293,6 +310,11 @@
 
       @include r(1200) {
         padding: 15px 10px;
+      }
+
+      @include r(426) {
+        padding: 10px 5px;
+        margin: 18px auto;
       }
 
       &::before {
@@ -341,6 +363,12 @@
       grid-template-columns: repeat(2, 1fr);
       margin-bottom: 25px;
       row-gap: 25px;
+    }
+
+    @include r(426) {
+      gap: 12px;
+      margin-bottom: 18px;
+      row-gap: 18px;
     }
 
     .button {
