@@ -36,9 +36,8 @@ $(() => {
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
-            snapOnRelease: true,
-            draggable: true,
         },
+        mousewheel: true,
         breakpoints: {
             0: {
                 slidesPerView: 1,
@@ -55,6 +54,10 @@ $(() => {
             1200: {
                 slidesPerView: 4,
                 spaceBetween: 35,
+                scrollbar: {
+                    snapOnRelease: true,
+                    draggable: true,
+                },
             },
         }
     });
@@ -64,8 +67,6 @@ $(() => {
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: false,
-            snapOnRelease: true,
-            draggable: true,
         },
         breakpoints: {
             0: {
@@ -79,6 +80,10 @@ $(() => {
             1200: {
                 slidesPerView: 3,
                 spaceBetween: 35,
+                scrollbar: {
+                    snapOnRelease: true,
+                    draggable: true,
+                },
             },
         }
     });

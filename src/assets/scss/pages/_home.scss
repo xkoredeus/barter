@@ -336,27 +336,27 @@
     align-items: center;
     flex-grow: 1;
 
-    &::before {
-      @include ovl;
-      background: rgb(187,224,226);
-      background: linear-gradient(180deg, $tr 0%, #f1f1f1 64%);
-      height: 50%;
-      top: auto;
-      bottom: 0;
-      opacity: .5;
-      @include ease;
-    }
-
-    &::after {
-      @include ovl;
-      background: rgb(187,224,226);
-      background: linear-gradient(180deg, $tr 0%, #333 64%);
-      height: 50%;
-      top: auto;
-      bottom: -100%;
-      opacity: .5;
-      @include ease;
-    }
+    //&::before {
+    //  @include ovl;
+    //  background: rgb(187,224,226);
+    //  background: linear-gradient(180deg, $tr 0%, #f1f1f1 64%);
+    //  height: 50%;
+    //  top: auto;
+    //  bottom: 0;
+    //  opacity: .5;
+    //  @include ease;
+    //}
+    //
+    //&::after {
+    //  @include ovl;
+    //  background: rgb(187,224,226);
+    //  background: linear-gradient(180deg, $tr 0%, #333 64%);
+    //  height: 50%;
+    //  top: auto;
+    //  bottom: -100%;
+    //  opacity: .5;
+    //  @include ease;
+    //}
   }
 
   &__title {
@@ -365,10 +365,17 @@
   }
 
   &__list {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     font-size: 17px;
     color: #888888;
+    background: linear-gradient(180deg, #888888 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 
   &:hover {
@@ -381,16 +388,15 @@
           fill: $dark
         }
       }
+      &__list {
+        background: linear-gradient(180deg, #CECECE 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
       &__bottom {
         background-color: $dark;
-
-        &::before {
-          bottom: -100%;
-        }
-
-        &::after {
-          bottom: 0;
-        }
       }
     }
   }
@@ -403,7 +409,7 @@
   gap: 28px;
   background-image: url('../img/ind-pattern.jpg');
   @include cv;
-  background-size: 110%;
+  background-size: 130%;
   width: 100%;
   height: 100%;
   border-radius: 35px;
@@ -609,12 +615,13 @@
   overflow: hidden;
 
   @include r(768) {
-    width: 33px;
-    min-width: 33px;
-    padding: 4.5px;
+    width: 35px;
+    min-width: 35px;
+    padding: 5px;
   }
 
   svg {
+    width: 25px;
     min-width: 25px;
   }
 
@@ -635,15 +642,12 @@
   }
 
   &__item {
+    font-size: 11px;
     color: #888888;
     padding: 10px;
     letter-spacing: 0.5px;
     background: #FFFFFF;
     border-radius: 3px 9px 9px 9px;
-
-    @include r(1200) {
-      font-size: 11px;
-    }
   }
 }
 
@@ -823,7 +827,7 @@
     border-top: none;
 
     @include r(1200) {
-      padding: 29px 15px;
+      padding: 29px 5px;
     }
   }
   &__number {
@@ -996,7 +1000,7 @@
     &::before {
       position: absolute;
       content: '';
-      width: calc(100% + 81px);
+      width: calc(100% + 91px);
       height: 100%;
       right: 30px;
       top: 50%;
@@ -1007,6 +1011,7 @@
 
       @include r(1200) {
         right: 18px;
+        width: calc(100% + 81px);
       }
     }
 
@@ -1295,6 +1300,10 @@
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #534f4f26;
+
+    @include r(768) {
+      padding: 77px 15px 21px;
+    }
   }
 }
 
@@ -1502,16 +1511,16 @@
       padding: 20px 28px;
     }
 
-    &::before {
-      @include ovl;
-      background: rgb(187,224,226);
-      background: linear-gradient(180deg, $tr 0%, #f1f1f1 64%);
-      height: 60%;
-      top: auto;
-      bottom: 0;
-      opacity: 1;
-      @include ease;
-    }
+    //&::before {
+    //  @include ovl;
+    //  background: rgb(187,224,226);
+    //  background: linear-gradient(180deg, $tr 0%, #f1f1f1 64%);
+    //  height: 60%;
+    //  top: auto;
+    //  bottom: 0;
+    //  opacity: 1;
+    //  @include ease;
+    //}
 
     & > .button {
       position: relative;
@@ -1532,6 +1541,11 @@
     letter-spacing: 0.4px;
     margin-bottom: 23px;
     line-height: 1.5;
+    background: linear-gradient(180deg, #9C9C9C 76.56%, rgba(156, 156, 156, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 
   &__more {
