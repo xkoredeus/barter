@@ -6936,6 +6936,18 @@ html.fixed, body.fixed {
   margin-top: -58px;
 }
 
+@media only screen and (max-width: 976px) {
+  .pay-star {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pay-star {
+    margin-top: -34px;
+  }
+}
+
 .pay-info {
   color: #9C936D;
   border-radius: 20px 35px 20px 7px;
@@ -7126,6 +7138,12 @@ html.fixed, body.fixed {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .tariff__number {
+    font-size: 35px;
+  }
+}
+
 .tariff__info {
   position: relative;
   display: -webkit-box;
@@ -7185,6 +7203,15 @@ html.fixed, body.fixed {
   .tariff__button {
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tariff__button {
+    padding-top: 37px;
+    padding-bottom: 23px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 

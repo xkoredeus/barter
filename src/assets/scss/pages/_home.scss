@@ -679,6 +679,14 @@
 
 .pay-star {
   margin-top: -58px;
+
+  @include r(976) {
+    margin-top: 0;
+  }
+
+  @include r(768) {
+    margin-top: -34px;
+  }
 }
 
 .pay-info {
@@ -843,6 +851,10 @@
     @include r(1200) {
       font-size: 45px;
     }
+
+    @include r(768) {
+      font-size: 35px;
+    }
   }
 
   &__info {
@@ -895,7 +907,13 @@
     @include r(1200) {
       border-bottom-left-radius: 16px;
       border-bottom-right-radius: 16px;
+    }
 
+    @include r(768) {
+      padding-top: 37px;
+      padding-bottom: 23px;
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
 }
