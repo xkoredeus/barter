@@ -6570,6 +6570,7 @@ html.fixed, body.fixed {
 }
 
 .ind-item__list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6583,6 +6584,9 @@ html.fixed, body.fixed {
   text-align: center;
   font-size: 17px;
   color: #888888;
+}
+
+.ind-item__list span {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(40.16%, #888888), color-stop(127.95%, rgba(131, 131, 131, 0.3)));
   background: linear-gradient(180deg, #888888 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
   -webkit-background-clip: text;
@@ -6599,7 +6603,7 @@ html.fixed, body.fixed {
   fill: #333333;
 }
 
-.ind-item:hover .ind-item__list {
+.ind-item:hover .ind-item__list span {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(40.16%, #CECECE), color-stop(127.95%, rgba(131, 131, 131, 0.3)));
   background: linear-gradient(180deg, #CECECE 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
   -webkit-background-clip: text;

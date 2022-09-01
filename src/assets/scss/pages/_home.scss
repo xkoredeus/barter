@@ -365,17 +365,21 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     font-size: 17px;
     color: #888888;
-    background: linear-gradient(180deg, #888888 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+
+    span {
+      background: linear-gradient(180deg, #888888 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
   }
 
   &:hover {
@@ -389,11 +393,13 @@
         }
       }
       &__list {
-        background: linear-gradient(180deg, #CECECE 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+        span {
+          background: linear-gradient(180deg, #CECECE 40.16%, rgba(131, 131, 131, 0.3) 127.95%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
       }
       &__bottom {
         background-color: $dark;
