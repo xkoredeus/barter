@@ -6172,6 +6172,7 @@ html.fixed, body.fixed {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 32px;
+  min-height: 375px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -6450,6 +6451,34 @@ html.fixed, body.fixed {
     left: 25%;
     bottom: -45px;
   }
+}
+
+.offer--blog {
+  padding-bottom: 189px;
+}
+
+.offer--blog .offer-wrapper::before {
+  opacity: 0.5;
+}
+
+.offer--blog .offer-wrapper::after {
+  position: absolute;
+  content: '';
+  width: 150px;
+  height: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ea465a), to(rgba(237, 106, 121, 0)));
+  background: linear-gradient(0deg, #ea465a 0%, rgba(237, 106, 121, 0) 100%);
+  right: 0;
+  bottom: 0;
+}
+
+.offer--blog .offer-phone {
+  top: 0;
+}
+
+.offer--blog .offer__app {
+  height: 189px;
+  right: -83px;
 }
 
 @media only screen and (max-width: 576px) {
