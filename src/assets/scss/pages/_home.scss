@@ -26,7 +26,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    min-height: 375px;
 
     @include r(1200) {
       gap: 20px;
@@ -258,35 +257,6 @@
       }
     }
   }
-
-  &--blog {
-    padding-bottom: 189px;
-
-    .offer-wrapper {
-      &::before {
-        opacity: 0.5;
-      }
-
-      &::after {
-        position: absolute;
-        content: '';
-        width: 150px;
-        height: 100px;
-        background: linear-gradient(0deg, rgba(234,70,90,1) 0%, rgba(237,106,121,0) 100%);
-        right: 0;
-        bottom: 0;
-      }
-    }
-
-    .offer-phone {
-      top: 0;
-    }
-
-    .offer__app {
-      height: 189px;
-      right: -83px;
-    }
-  }
 }
 
 .ind {
@@ -496,6 +466,7 @@
     }
   }
 }
+
 .layout {
   .swiper-scrollbar {
     width: 282px;
@@ -1054,7 +1025,7 @@
     &::before {
       position: absolute;
       content: '';
-      width: calc(100% + 91px);
+      width: calc(100% + 111px);
       height: 100%;
       right: 30px;
       top: 50%;

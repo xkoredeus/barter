@@ -38,3 +38,26 @@
   justify-content: center;
   align-items: center;
 }
+@mixin title-h2 {
+  font-size: 36px;
+
+  @include r(1200) {
+    font-size: 18px;
+  }
+
+  @include r(768) {
+    font-size: 16px;
+  }
+}
+
+@mixin title-h3 {
+  font-size: 21px;
+
+  @include r(1200) {
+    font-size: 18px;
+  }
+
+  @include r(768) {
+    font-size: 16px;
+  }
+}

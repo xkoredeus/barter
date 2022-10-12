@@ -16,14 +16,23 @@
 <body>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     <div class="layout">
+
         {{> preloader}}
+
         {{> header}}
+
         <main role="main" class="layout__in">
+
             {{> body}}
+
         </main>
+
         {{> footer}}
+
     </div>
+
     {{> svg}}
+
    <script src="{{root}}assets/js/app.js"></script>
 </body>
 </html>

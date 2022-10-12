@@ -25,17 +25,11 @@
   }
 
   &__title-h2 {
-    font-size: 36px;
     font-family: $n-Bold;
     line-height: 1.2;
     text-align: center;
 
-    @include r(1200) {
-      font-size: 30px;
-    }
-    @include r(768) {
-      font-size: 27px;
-    }
+    @include title-h2;
   }
 
   &__subtitle {
@@ -52,13 +46,19 @@
       font-size: 11px;
     }
   }
+
+  &__subsubtitle {
+    color: #9C9C9C;
+
+    @include title-h3;
+  }
 }
 
 .section-decor {
   position: relative;
-  display: inline;
-  span {
+  display: inline-block;
 
+  span {
     position: relative;
   }
 
@@ -73,5 +73,6 @@
     background-color: #F9EAB8;
   }
 }
+
 
 

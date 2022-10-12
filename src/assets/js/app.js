@@ -131,7 +131,6 @@ $(() => {
             .find('.question__bottom')
             .slideToggle();
     })
-
 });
 
 
@@ -169,3 +168,187 @@ var reviewBottom = new Swiper(".js-rev-bottom-slider", {
     },
 });
 
+
+$(() => {
+    if ( $(window).width() > 768 ) {
+        const blissSlider = new Swiper(".js-bliss-slider", {
+            speed: 1000,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        hide: false,
+                        snapOnRelease: true,
+                        draggable: true,
+                    },
+                },
+                1200: {
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        hide: false,
+                        snapOnRelease: true,
+                        draggable: true,
+                    },
+                    slidesPerView: 3,
+                },
+            }
+        });
+    }
+
+    const aboutReviews = new Swiper(".js-about-rev-slider", {
+        speed: 1500,
+        freeMode: false,
+        allowTouchMove: false,
+        navigation: {
+            nextEl: ".js-about-rev-next",
+            prevEl: ".js-about-rev-prev",
+        },
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+
+    const aboutBottom = new Swiper(".js-about-bottom-slider", {
+        speed: 1500,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 19,
+            },
+            1200: {
+                slidesPerView: 3,
+                grid: {
+                    rows: 2,
+                },
+                spaceBetween: 33,
+            },
+        },
+        navigation: {
+            nextEl: ".js-about-bottom-next",
+            prevEl: ".js-about-bottom-prev",
+        },
+    });
+    const intSlider = new Swiper(".js-int-slider", {
+        speed: 1000,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+        },
+        mousewheel: true,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+                scrollbar: {
+                    snapOnRelease: true,
+                    draggable: true,
+                },
+            },
+        }
+    });
+
+    if ( $(window).width() > 1200 ) {
+        const howSlider = new Swiper(".js-how-slider", {
+            speed: 1000,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+            mousewheel: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                },
+                576: {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    scrollbar: {
+                        snapOnRelease: true,
+                        draggable: true,
+                    },
+                },
+            }
+        });
+    }
+
+
+    if ( $(window).width() > 768 ) {
+        $('.js-act-card').hover(function () {
+            if (!($(this).hasClass('.card--active'))) {
+                $('.js-act-card').removeClass('card--active');
+
+                $(this).addClass('card--active');
+
+                $('.js-act-picture').attr('src', $(this).data('picture'));
+            }
+        });
+    }
+});
+
+if ( $(window).width() < 768 ) {
+
+    var actBottom = new Swiper(".js-act-slider-bottom", {
+        speed: 1500,
+        slidesPerView: 1,
+        watchSlidesProgress: true,
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            draggable: true,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+
+    });
+    var actTop = new Swiper(".js-act-slider-top", {
+        speed: 1500,
+        freeMode: false,
+        watchSlidesProgress: true,
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+
+    actTop.controller.control = actBottom;
+    actBottom.controller.control = actTop;
+
+    actBottom.on('slideChange', function () {
+        $('.js-act-slider-current').html(actBottom.activeIndex + 1);
+    });
+    $('.js-act-slider-length').html(actBottom.slides.length);
+};
