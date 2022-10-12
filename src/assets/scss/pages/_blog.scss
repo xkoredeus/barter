@@ -1102,6 +1102,10 @@
 
 
 .act-slider {
+  @include rmin(768) {
+    display: none;
+  }
+
   &__top {
     .swiper-slide {
       @include flex-center;

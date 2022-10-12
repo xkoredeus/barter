@@ -9514,6 +9514,12 @@ html.fixed, body.fixed {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .act-slider {
+    display: none;
+  }
+}
+
 .act-slider__top .swiper-slide {
   display: -webkit-box;
   display: -ms-flexbox;
