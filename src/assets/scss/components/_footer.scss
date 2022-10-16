@@ -26,6 +26,10 @@
       width: 167px;
       height: 100px;
     }
+
+    @include r(500) {
+      width: 103px;
+    }
   }
 
   &-logo {

@@ -8234,6 +8234,7 @@ html.fixed, body.fixed {
 @media only screen and (max-width: 576px) {
   .offer--blog .offer-phone {
     max-width: 430px;
+    height: auto;
   }
 }
 
@@ -10085,6 +10086,9 @@ html.fixed, body.fixed {
 @media only screen and (max-width: 768px) {
   .use-info__item {
     grid-gap: 37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -10289,6 +10293,9 @@ html.fixed, body.fixed {
   display: -ms-flexbox;
   display: flex;
   gap: 13px;
+  outline: none;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
 }
 
 .popup-review .swiper-pagination-bullet {
@@ -10813,6 +10820,12 @@ html.fixed, body.fixed {
   .footer::before {
     width: 167px;
     height: 100px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer::before {
+    width: 103px;
   }
 }
 

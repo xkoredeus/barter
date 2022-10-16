@@ -52,6 +52,7 @@
 
     @include r(576) {
       max-width: 430px;
+      height: auto;
     }
   }
 
@@ -1547,6 +1548,7 @@
 
     @include r(768) {
       grid-gap: 37px;
+      display: flex;
     }
   }
 
@@ -1726,6 +1728,8 @@
     padding: 0 37px;
     display: flex;
     gap: 13px;
+    outline: none;
+    box-shadow: unset;
   }
   .swiper-pagination-bullet {
     width: 58px;
