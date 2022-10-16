@@ -184,10 +184,10 @@
                         <div class="section__subtitle">МЕНЮ</div>
         
                         <div class="menu__list d-flex flex-column align-items-start">
-                            <a class="menu__link" href="#ind">Для кого</a>
-                            <a class="menu__link" href="#how">Как это работает</a>
-                            <a class="menu__link" href="#tariff">Тарифы</a>
-                            <a class="menu__link" href="#stat">Статистика платформы</a>
+                            <a class="menu__link" href="#about">Отзывы</a>
+                            <a class="menu__link" href="#act">Техническое задание</a>
+                            <a class="menu__link" href="#how">Как пользоваться</a>
+                            <a class="menu__link" href="#use">Доступные заведения</a>
                             <a class="menu__link" href="#questions">Часто задаваемые вопросы</a>
                         </div>
         
@@ -206,13 +206,13 @@
                         <div class="menu__buttons">
                             <a href="#" class="button button--yellow">
                                 <svg width="18" height="13">
-                                    <use xlink:href="#camera"></use>
+                                    <use xlink:href="#hands"></use>
                                 </svg>
-                                <span>Блогерам</span>
+                                <span>Бизнесу</span>
                             </a>
                             <a href="#" class="button button--yellow">
                                 <svg width="17" height="15">
-                                    <use xlink:href="#hands"></use>
+                                    <use xlink:href="#comrades"></use>
                                 </svg>
                                 <span>Партнерам</span>
                             </a>
@@ -225,10 +225,10 @@
                         </div>
         
                         <a href="#" class="button button--primary w-100">
-                            <svg width="17" height="17">
-                                <use xlink:href="#bag"></use>
+                            <svg width="17" height="17" >
+                                <use xlink:href="#account"></use>
                             </svg>
-                            <span>Добавить заведение</span>
+                            <span>Создать аккаунт</span>
                         </a>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-5 col-md-3 offer__pictures-wrapper">
-                                <img class="offer-phone" src="assets/img/phone.png" alt="phone">
+                                <img class="offer-phone" src="assets/img/phone-blog.png" alt="phone">
                             </div>
                         </div>
                         <svg class="offer__app" width="547" preserveAspectRatio="none" height="102" viewBox="0 0 547 102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -266,7 +266,7 @@
                             <div class="offer-info__title section__subsubtitle">Прямо сейчас доступно:</div>
                             <div class="offer-info__content">
                                 <div class="offer-info__item">
-                                    <span class="t-bold">200 заведений</span><br>
+                                    <span class="t-bold">200&nbsp;заведений</span><br>
                                     на твой выбор
                                 </div>
                                 <div class="offer-info__divider">
@@ -275,15 +275,21 @@
                                     </svg>
                                 </div>
                                 <div class="offer-info__item">
-                                    Услуги на общую <br>
-                                    сумму <span class="t-bold">476 800 ₽</span>
+                                    Услуги&nbsp;на&nbsp;общую <br>
+                                    сумму&nbsp;<span class="t-bold">476&nbsp;800&nbsp;₽</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <button class="float-button">
+                    <svg width="24" height="24">
+                        <use xlink:href="#account"></use>
+                    </svg>
+                    <span>Создать аккаунт</span>
+                </button>
             </section>
-            <section class="bliss section--inner">
+            <section class="bliss section--inner" id="bliss">
                 <div class="container">
                     <div class="bliss__title section__title-h1">
                         <div class="mb-4 mb-sm-5">
@@ -354,7 +360,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about section--inner">
+            <section class="about section--inner" id="about">
                 <div class="container">
                     <div class="section__title-h1">
                         <div class="mb-3 mb-xl-4">Уже 1538 блогеров <br> <span class="section-decor"><span>присоединились</span></span> к нам</div>
@@ -372,7 +378,7 @@
                                         <use xlink:href="#comment"></use>
                                     </svg>
                                 </div>
-                                <div class="about-left__in d-flex flex-column justify-content-between h-100">
+                                <div class="about-left__in d-flex flex-column justify-content-between">
                                     <div>
                                         <div class="section__title-h2 mb-3 mb-md-3 tal">Блогеры о нас</div>
                                         <div class="about-photos mb-4 mb-md-4">
@@ -384,7 +390,7 @@
                                             <div class="text-lgray ml-2 t-regular">и&nbsp;др.</div>
                                         </div>
                                     </div>
-                                    <a href="#" class="button button--secondary">Смотреть видео отзывы</a>
+                                    <button data-fancybox data-src="#popup-review" class="button button--secondary">Смотреть видео отзывы</button>
                                 </div>
                             </div>
                             <div class="about-reviews">
@@ -828,7 +834,7 @@
                     Количество заведений ежедневно растет, а бизнес <span>принимает блогера без отказа</span>
                 </div>
             </section>
-            <section class="section--inner act">
+            <section class="section--inner act" id="act">
                 <div class="container">
                     <div class="section__title-h1">
                         <div class="mb-3 mb-xl-4"><span class="section-decor"><span>Продавать не нужно,</span></span> просто <br> показывай как пользуешься услугой</div>
@@ -837,7 +843,7 @@
                     <!--desktop -->
                     <div class="act-layout">
                         <div class="d-flex flex-column card-column">
-                            <div class="card js-act-card card--active" data-picture="assets/img/act-1.png">
+                            <div class="card js-act-card card--active" data-picture="assets/img/act-1.jpg">
                                 <div class="card-in">
                                     <div class="card-top">
                                         <svg class="card-icon" width="25" height="22">
@@ -848,7 +854,7 @@
                                     <div class="card-info">Показывай заведение, интерьер и общую атмосферу</div>
                                 </div>
                             </div>
-                            <div class="card js-act-card" data-picture="assets/img/act-2.png">
+                            <div class="card js-act-card" data-picture="assets/img/act-2.jpg">
                                 <div class="card-in">
                                     <div class="card-top">
                                         <svg class="card-icon" width="23" height="25" >
@@ -859,7 +865,7 @@
                                     <div class="card-info">Демонстрируй товар, блюда или процесс работы мастера</div>
                                 </div>
                             </div>
-                            <div class="card js-act-card" data-picture="assets/img/act-3.png">
+                            <div class="card js-act-card" data-picture="assets/img/act-3.jpg">
                                 <div class="card-in">
                                     <div class="card-top">
                                         <svg class="card-icon" width="25" height="25">
@@ -872,10 +878,10 @@
                             </div>
                         </div>
                         <div class="act-phone">
-                            <img class="act-phone__picture js-act-picture" src="assets/img/act-1.png" alt="Action picture">
+                            <img class="act-phone__picture js-act-picture" src="assets/img/act-1.jpg" alt="Action picture">
                         </div>
                         <div class="d-flex flex-column card-column">
-                            <div class="card js-act-card" data-picture="assets/img/act-4.png">
+                            <div class="card js-act-card" data-picture="assets/img/act-4.jpg">
                                 <div class="card-in">
                                     <div class="card-top">
                                         <svg class="card-icon" width="25" height="26">
@@ -886,7 +892,7 @@
                                     <div class="card-info">Дари подписчикам приятные бонусы за счет заведения</div>
                                 </div>
                             </div>
-                            <div class="card js-act-card" data-picture="assets/img/act-5.png">
+                            <div class="card js-act-card" data-picture="assets/img/act-5.jpg">
                                 <div class="card-in">
                                     <div class="card-top">
                                         <svg class="card-icon" width="25" height="25" >
@@ -907,27 +913,27 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="act-slider__top-item">
-                                            <img src="assets/img/act-1.png" alt="Action picture">
+                                            <img src="assets/img/act-1.jpg" alt="Action picture">
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="act-slider__top-item">
-                                            <img src="assets/img/act-2.png" alt="Action picture">
+                                            <img src="assets/img/act-2.jpg" alt="Action picture">
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="act-slider__top-item">
-                                            <img src="assets/img/act-3.png" alt="Action picture">
+                                            <img src="assets/img/act-3.jpg" alt="Action picture">
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="act-slider__top-item">
-                                            <img src="assets/img/act-4.png" alt="Action picture">
+                                            <img src="assets/img/act-4.jpg" alt="Action picture">
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="act-slider__top-item">
-                                            <img src="assets/img/act-5.png" alt="Action picture">
+                                            <img src="assets/img/act-5.jpg" alt="Action picture">
                                         </div>
                                     </div>
                                 </div>
@@ -1043,7 +1049,7 @@
                     </div>
                 </div>
             </div>
-            <section class="how-section section--inner">
+            <section class="how-section section--inner" id="how">
                 <div class="container">
                     <div class="section__title-h1">
                         Посмотри, <span class="section-decor"><span>как просто</span></span> <br> пользоваться платформой
@@ -1142,7 +1148,7 @@
                             <div class="card-in">
                                 <div class="card-top">
                                     <svg class="card-icon" width="25" height="23">
-                                        <use xlink:href="#favorites"></use>
+                                        <use xlink:href="#house"></use>
                                     </svg>
                                     <div class="card-title">Карточка заведения</div>
                                 </div>
@@ -1218,9 +1224,10 @@
                     </div>
                 </div>
             </section>
-            <section class="ind use section--inner" id="use">
+            <section class="ind use section--inner blog-ind" id="use">
                 <div class="container">
-                    <div class="ind__title section__title-h1">Присоединяйся к BARTER MAP <br> и пользуйся <span><svg><use xlink:href="#outline"></use></svg>бесплатно</span>
+                    <div class="ind__title blog-ind__title section__title-h1">
+                        Присоединяйся к BARTER MAP <br> и пользуйся <span><svg preserveAspectRatio="none"><use xlink:href="#ziga"></use></svg>бесплатно</span>
                     </div>
             
                     <div class="ind-slider-wrapper js-ind-slider">
@@ -1417,102 +1424,166 @@
                     </div>
                 </div>
             </section>
+            
+            <div class="popup-review" id="popup-review" style="display: none">
+                <div class="popup-review__wrapper">
+                    <div class="popup-review__content">
+                        <div class="popup-review__slider js-popup-rev-slider">
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="popup-review__item">
+                                        <div class="popup-review__info">
+                                            <span class="popup-review__photo" style="background-image: url(assets/img/int-4.jpg);"></span>
+                                            <span>@nickname</span>
+                                            <button class="popup-review__button js-close-popup-review">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="#cross-thin"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <img src="assets/img/act-1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="popup-review__item">
+                                        <div class="popup-review__info">
+                                            <span class="popup-review__photo" style="background-image: url(assets/img/int-4.jpg);"></span>
+                                            <span>@nickname</span>
+                                            <button class="popup-review__button js-close-popup-review">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="#cross-thin"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <img src="assets/img/act-2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="popup-review__item">
+                                        <div class="popup-review__info">
+                                            <span class="popup-review__photo" style="background-image: url(assets/img/int-4.jpg);"></span>
+                                            <span>@nickname</span>
+                                            <button class="popup-review__button js-close-popup-review">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="#cross-thin"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <img src="assets/img/act-3.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="popup-review__item">
+                                        <div class="popup-review__info">
+                                            <span class="popup-review__photo" style="background-image: url(assets/img/int-4.jpg);"></span>
+                                            <span>@nickname</span>
+                                            <button class="popup-review__button js-close-popup-review">
+                                                <svg width="15" height="15">
+                                                    <use xlink:href="#cross-thin"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <img src="assets/img/act-4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-review__nav">
+                        <button class="popup-review__nav-item js-popup-rev-prev">
+                            <svg width="14" height="25">
+                                <use xlink:href="#arrow-left"></use>
+                            </svg>
+                        </button>
+                        <button class="popup-review__nav-item js-popup-rev-next">
+                            <svg width="14" height="25">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
             <section class="section--inner" id="questions">
                 <div class="container">
                     <div class="section__title-h1"><span class="section-decor"><span>Частые вопросы</span></span></div>
                     <div class="question-list">
                         <div class="question">
                             <div class="question__top js-toggle-question">
-                                <div class="question__title">Сколько времени нужно тратить на сервис?</div>
+                                <div class="question__title">Можно ли посещать заведения без бронирования визита?</div>
                                 <svg width="22" height="22">
                                     <use xlink:href="#cross-thin"></use>
                                 </svg>
                             </div>
                             <div class="question__bottom">
                                 <div class="question__bottom-in">
-                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
+                                    <p>Вы можете забронировать депозит в любое комфортное для вас время, однако в дальнейшем необходимо согласовать с заведением дату и время визита</p>
             
-                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                                        еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-            
-                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                    <p>Если в заведении есть свободные места и оно готово принять блогеров прямо сейчас, то вы сможете сразу воспользоваться своим депозитом</p>
                                 </div>
                             </div>
                         </div>
                         <div class="question">
                             <div class="question__top js-toggle-question">
-                                <div class="question__title">Сколько стоит размещение?</div>
+                                <div class="question__title">Как часто можно посещать заведения?</div>
                                 <svg width="22" height="22">
                                     <use xlink:href="#cross-thin"></use>
                                 </svg>
                             </div>
                             <div class="question__bottom">
                                 <div class="question__bottom-in">
-                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
-            
-                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                                        еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-            
-                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                    <p>BARTER MAP никак не ограничивает количество визитов, посещайте заведения когда захотите.</p>
+                                    <p>Однако заведение может задать ограничение на повторные визиты: не чаще чем один раз в день, неделю, месяц</p>
                                 </div>
                             </div>
                         </div>
                         <div class="question">
                             <div class="question__top js-toggle-question">
-                                <div class="question__title">Можно ли выбирать блогеров самостоятельно?</div>
+                                <div class="question__title">Какая средняя сумма дипозитов?</div>
                                 <svg width="22" height="22">
                                     <use xlink:href="#cross-thin"></use>
                                 </svg>
                             </div>
                             <div class="question__bottom">
                                 <div class="question__bottom-in">
-                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
-            
-                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                                        еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-            
-                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                    <p>Мы используем умные депозиты</p>
+                                    <p>Каждое заведение индивидуально указывает депозит для больших и маленьких блогеров</p>
+                                    <p>Далее депозит автоматически подстраиваются под каждого блогера, в зависимости от его охватов</p>
+                                    <p>С ростом вашей популярности, доступные депозиты также будут увеличиваться</p>
                                 </div>
                             </div>
                         </div>
                         <div class="question">
                             <div class="question__top js-toggle-question">
-                                <div class="question__title">Какой депозит устанавливать для блогеров?</div>
+                                <div class="question__title">Что делать, если во время визита возникла непредвиденная ситуация?</div>
                                 <svg width="22" height="22">
                                     <use xlink:href="#cross-thin"></use>
                                 </svg>
                             </div>
                             <div class="question__bottom">
                                 <div class="question__bottom-in">
-                                    <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
-            
-                                    <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                                        еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-            
-                                    <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                                    <p>Если во время визита вы столкнулись с трудностями или какой-то неприятной ситуацией, вам всегда доступна наша заботливая поддержка, которая поможет разобраться с любой ситуации</p>
                                 </div>
                             </div>
                         </div>
                         <div class="question">
                             <div class="question__top js-toggle-question">
-                                <div class="question__title">На чем зарабатывает платформа?</div>
+                                <div class="question__title">Что делать, если заведение не понравилось?</div>
                                 <svg width="22" height="22">
                                     <use xlink:href="#cross-thin"></use>
                                 </svg>
                             </div>
                             <div class="question__bottom">
                                 <div class="question__bottom-in">
-                                    <p>Платформа взымает комиссию за каждый визит блогера.</p>
-            
-                                    <p>Комиссия зависит от эффективности рекламы, а точнее от того количества людей, которое узнало
-                                        о ресторане из рекламы блогера</p>
+                                    <p>После визита вы можете поставить низкий рейтинг заведению и наша служба контроля качества начинёт проверку заведения</p>
+                                    <p>При выявлении посредственного качества и неподобающего поведения, компанию могут отключить от платформы навсегда</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
         </main>
 
         <footer class="footer">
@@ -1536,16 +1607,16 @@
                     <div class="d-flex justify-content-between flex-column align-items-center flex-md-row align-items-md-end">
                         <div class="d-flex flex-md-column align-items-center align-items-md-start mb-3 mb-md-0">
                             <a href="#" class="footer__link d-flex align-items-center mr-4 mr-md-0 mb-md-2 mb-xl-3">
-                                <svg width="17" height="17">
+                                <svg width="17" height="17" fill="#fff">
                                     <use xlink:href="#comrades"></use>
                                 </svg>
                                 <span class="ml-2">Партнерам</span>
                             </a>
                             <a href="#" class="footer__link d-flex align-items-center">
-                                <svg width="17" height="12" fill="#fff">
-                                    <use xlink:href="#camera"></use>
+                                <svg width="17" height="16" fill="#fff">
+                                    <use xlink:href="#hands"></use>
                                 </svg>
-                                <span class="ml-2">Блогерам</span>
+                                <span class="ml-2">Бизнесу</span>
                             </a>
                         </div>
         
@@ -1678,6 +1749,7 @@
         <symbol id="arrow-bottom" viewBox="0 0 16 9"  xmlns="http://www.w3.org/2000/svg">
             <path d="M6.81784 8.13372C7.52158 8.64942 8.47841 8.64942 9.18216 8.13373L14.3276 4.36323C15.887 3.2205 15.0787 0.75 13.1454 0.75H2.8546C0.921307 0.75 0.113023 3.2205 1.67245 4.36323L6.81784 8.13372Z" />
         </symbol>
+    
         <symbol id="ussr" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.405799 8.06431L4.50313 11.5375L3.22883 16.76C2.97852 17.7341 4.05341 18.5336 4.92748 17.9842L9.50007 15.1601L14.0725 17.9837C14.9223 18.5079 15.9963 17.7339 15.7713 16.7593L14.4968 11.5374L18.5947 8.06396C19.3687 7.41448 18.9692 6.14018 17.9451 6.06514L12.5729 5.6651L10.5492 0.69334C10.1746 -0.231113 8.85024 -0.231113 8.4502 0.69334L6.42655 5.66527L1.05457 6.06532C0.0309438 6.16573 -0.369103 7.41483 0.405799 8.06431Z" fill="#EA4256"/>
         </symbol>
@@ -1699,14 +1771,14 @@
             <path d="M9 3.5C8.17157 3.5 7.5 2.82843 7.5 2C7.5 1.17157 8.17157 0.5 9 0.5C9.82843 0.5 10.5 1.17157 10.5 2C10.5 2.82843 9.82843 3.5 9 3.5Z" fill="black"/>
             <path d="M1.5 3.5C0.671573 3.5 0 2.82843 0 2C0 1.17157 0.671573 0.5 1.5 0.5C2.32843 0.5 3 1.17157 3 2C3 2.82843 2.32843 3.5 1.5 3.5Z" fill="black"/>
         </symbol>
-        <symbol id="comrades" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.3125 9.20833C4.68207 9.20833 4.0658 9.02139 3.54162 8.67114C3.01744 8.3209 2.60889 7.82308 2.36763 7.24064C2.12638 6.6582 2.06326 6.0173 2.18625 5.39898C2.30924 4.78067 2.61282 4.21271 3.0586 3.76693C3.50438 3.32115 4.07234 3.01757 4.69065 2.89458C5.30896 2.77159 5.94986 2.83471 6.5323 3.07597C7.11474 3.31722 7.61256 3.72577 7.96281 4.24995C8.31306 4.77414 8.5 5.39041 8.5 6.02083C8.49906 6.86592 8.16294 7.67613 7.56537 8.2737C6.9678 8.87127 6.15759 9.2074 5.3125 9.20833ZM5.3125 4.25C4.96226 4.25 4.61989 4.35386 4.32868 4.54844C4.03747 4.74302 3.81049 5.01959 3.67646 5.34317C3.54243 5.66674 3.50736 6.0228 3.57569 6.36631C3.64402 6.70982 3.81268 7.02535 4.06033 7.273C4.30799 7.52066 4.62352 7.68931 4.96703 7.75764C5.31054 7.82597 5.66659 7.7909 5.99017 7.65687C6.31375 7.52284 6.59031 7.29587 6.78489 7.00466C6.97948 6.71345 7.08333 6.37107 7.08333 6.02083C7.08333 5.55118 6.89676 5.10076 6.56467 4.76867C6.23257 4.43657 5.78215 4.25 5.3125 4.25ZM10.625 16.2917V15.9375C10.625 14.5285 10.0653 13.1773 9.069 12.181C8.07272 11.1847 6.72146 10.625 5.3125 10.625C3.90354 10.625 2.55228 11.1847 1.556 12.181C0.559708 13.1773 0 14.5285 0 15.9375L0 16.2917C0 16.4795 0.0746278 16.6597 0.207466 16.7925C0.340304 16.9254 0.520472 17 0.708333 17C0.896195 17 1.07636 16.9254 1.2092 16.7925C1.34204 16.6597 1.41667 16.4795 1.41667 16.2917V15.9375C1.41667 14.9043 1.82712 13.9133 2.55773 13.1827C3.28834 12.4521 4.27926 12.0417 5.3125 12.0417C6.34574 12.0417 7.33666 12.4521 8.06727 13.1827C8.79788 13.9133 9.20833 14.9043 9.20833 15.9375V16.2917C9.20833 16.4795 9.28296 16.6597 9.4158 16.7925C9.54864 16.9254 9.7288 17 9.91667 17C10.1045 17 10.2847 16.9254 10.4175 16.7925C10.5504 16.6597 10.625 16.4795 10.625 16.2917ZM17 12.75C17 11.7928 16.7229 10.8561 16.2022 10.0529C15.6815 9.24975 14.9395 8.61446 14.0657 8.22373C13.1919 7.833 12.2237 7.70354 11.2779 7.85098C10.3321 7.99842 9.44928 8.41646 8.73588 9.05463C8.66558 9.11639 8.60823 9.19147 8.56712 9.27553C8.52601 9.35959 8.50197 9.45096 8.49637 9.54437C8.49078 9.63777 8.50375 9.73136 8.53453 9.81973C8.56531 9.90809 8.61329 9.98948 8.67571 10.0592C8.73812 10.1289 8.81373 10.1856 8.89817 10.2259C8.98261 10.2662 9.0742 10.2894 9.16765 10.2941C9.2611 10.2989 9.35457 10.285 9.44264 10.2534C9.53072 10.2218 9.61166 10.1731 9.68079 10.11C10.1904 9.65431 10.821 9.35582 11.4965 9.2506C12.172 9.14537 12.8636 9.2379 13.4877 9.51703C14.1117 9.79615 14.6417 10.2499 15.0136 10.8236C15.3854 11.3973 15.5833 12.0663 15.5833 12.75C15.5833 12.9379 15.658 13.118 15.7908 13.2509C15.9236 13.3837 16.1038 13.4583 16.2917 13.4583C16.4795 13.4583 16.6597 13.3837 16.7925 13.2509C16.9254 13.118 17 12.9379 17 12.75ZM12.3958 6.375C11.7654 6.375 11.1491 6.18806 10.625 5.83781C10.1008 5.48756 9.69222 4.98974 9.45097 4.40731C9.20971 3.82487 9.14659 3.18397 9.26958 2.56565C9.39257 1.94734 9.69615 1.37938 10.1419 0.933599C10.5877 0.487819 11.1557 0.184239 11.774 0.0612484C12.3923 -0.061742 13.0332 0.0013811 13.6156 0.242635C14.1981 0.48389 14.6959 0.89244 15.0461 1.41662C15.3964 1.9408 15.5833 2.55707 15.5833 3.1875C15.5824 4.03259 15.2463 4.8428 14.6487 5.44037C14.0511 6.03794 13.2409 6.37406 12.3958 6.375ZM12.3958 1.41667C12.0456 1.41667 11.7032 1.52053 11.412 1.71511C11.1208 1.90969 10.8938 2.18626 10.7598 2.50983C10.6258 2.83341 10.5907 3.18947 10.659 3.53297C10.7274 3.87648 10.896 4.19201 11.1437 4.43967C11.3913 4.68733 11.7069 4.85598 12.0504 4.92431C12.3939 4.99264 12.7499 4.95757 13.0735 4.82354C13.3971 4.68951 13.6736 4.46254 13.8682 4.17132C14.0628 3.88011 14.1667 3.53774 14.1667 3.1875C14.1667 2.71785 13.9801 2.26743 13.648 1.93533C13.3159 1.60324 12.8655 1.41667 12.3958 1.41667Z" fill="white"/>
+        <symbol id="comrades" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.3125 9.20833C4.68207 9.20833 4.0658 9.02139 3.54162 8.67114C3.01744 8.3209 2.60889 7.82308 2.36763 7.24064C2.12638 6.6582 2.06326 6.0173 2.18625 5.39898C2.30924 4.78067 2.61282 4.21271 3.0586 3.76693C3.50438 3.32115 4.07234 3.01757 4.69065 2.89458C5.30896 2.77159 5.94986 2.83471 6.5323 3.07597C7.11474 3.31722 7.61256 3.72577 7.96281 4.24995C8.31306 4.77414 8.5 5.39041 8.5 6.02083C8.49906 6.86592 8.16294 7.67613 7.56537 8.2737C6.9678 8.87127 6.15759 9.2074 5.3125 9.20833ZM5.3125 4.25C4.96226 4.25 4.61989 4.35386 4.32868 4.54844C4.03747 4.74302 3.81049 5.01959 3.67646 5.34317C3.54243 5.66674 3.50736 6.0228 3.57569 6.36631C3.64402 6.70982 3.81268 7.02535 4.06033 7.273C4.30799 7.52066 4.62352 7.68931 4.96703 7.75764C5.31054 7.82597 5.66659 7.7909 5.99017 7.65687C6.31375 7.52284 6.59031 7.29587 6.78489 7.00466C6.97948 6.71345 7.08333 6.37107 7.08333 6.02083C7.08333 5.55118 6.89676 5.10076 6.56467 4.76867C6.23257 4.43657 5.78215 4.25 5.3125 4.25ZM10.625 16.2917V15.9375C10.625 14.5285 10.0653 13.1773 9.069 12.181C8.07272 11.1847 6.72146 10.625 5.3125 10.625C3.90354 10.625 2.55228 11.1847 1.556 12.181C0.559708 13.1773 0 14.5285 0 15.9375L0 16.2917C0 16.4795 0.0746278 16.6597 0.207466 16.7925C0.340304 16.9254 0.520472 17 0.708333 17C0.896195 17 1.07636 16.9254 1.2092 16.7925C1.34204 16.6597 1.41667 16.4795 1.41667 16.2917V15.9375C1.41667 14.9043 1.82712 13.9133 2.55773 13.1827C3.28834 12.4521 4.27926 12.0417 5.3125 12.0417C6.34574 12.0417 7.33666 12.4521 8.06727 13.1827C8.79788 13.9133 9.20833 14.9043 9.20833 15.9375V16.2917C9.20833 16.4795 9.28296 16.6597 9.4158 16.7925C9.54864 16.9254 9.7288 17 9.91667 17C10.1045 17 10.2847 16.9254 10.4175 16.7925C10.5504 16.6597 10.625 16.4795 10.625 16.2917ZM17 12.75C17 11.7928 16.7229 10.8561 16.2022 10.0529C15.6815 9.24975 14.9395 8.61446 14.0657 8.22373C13.1919 7.833 12.2237 7.70354 11.2779 7.85098C10.3321 7.99842 9.44928 8.41646 8.73588 9.05463C8.66558 9.11639 8.60823 9.19147 8.56712 9.27553C8.52601 9.35959 8.50197 9.45096 8.49637 9.54437C8.49078 9.63777 8.50375 9.73136 8.53453 9.81973C8.56531 9.90809 8.61329 9.98948 8.67571 10.0592C8.73812 10.1289 8.81373 10.1856 8.89817 10.2259C8.98261 10.2662 9.0742 10.2894 9.16765 10.2941C9.2611 10.2989 9.35457 10.285 9.44264 10.2534C9.53072 10.2218 9.61166 10.1731 9.68079 10.11C10.1904 9.65431 10.821 9.35582 11.4965 9.2506C12.172 9.14537 12.8636 9.2379 13.4877 9.51703C14.1117 9.79615 14.6417 10.2499 15.0136 10.8236C15.3854 11.3973 15.5833 12.0663 15.5833 12.75C15.5833 12.9379 15.658 13.118 15.7908 13.2509C15.9236 13.3837 16.1038 13.4583 16.2917 13.4583C16.4795 13.4583 16.6597 13.3837 16.7925 13.2509C16.9254 13.118 17 12.9379 17 12.75ZM12.3958 6.375C11.7654 6.375 11.1491 6.18806 10.625 5.83781C10.1008 5.48756 9.69222 4.98974 9.45097 4.40731C9.20971 3.82487 9.14659 3.18397 9.26958 2.56565C9.39257 1.94734 9.69615 1.37938 10.1419 0.933599C10.5877 0.487819 11.1557 0.184239 11.774 0.0612484C12.3923 -0.061742 13.0332 0.0013811 13.6156 0.242635C14.1981 0.48389 14.6959 0.89244 15.0461 1.41662C15.3964 1.9408 15.5833 2.55707 15.5833 3.1875C15.5824 4.03259 15.2463 4.8428 14.6487 5.44037C14.0511 6.03794 13.2409 6.37406 12.3958 6.375ZM12.3958 1.41667C12.0456 1.41667 11.7032 1.52053 11.412 1.71511C11.1208 1.90969 10.8938 2.18626 10.7598 2.50983C10.6258 2.83341 10.5907 3.18947 10.659 3.53297C10.7274 3.87648 10.896 4.19201 11.1437 4.43967C11.3913 4.68733 11.7069 4.85598 12.0504 4.92431C12.3939 4.99264 12.7499 4.95757 13.0735 4.82354C13.3971 4.68951 13.6736 4.46254 13.8682 4.17132C14.0628 3.88011 14.1667 3.53774 14.1667 3.1875C14.1667 2.71785 13.9801 2.26743 13.648 1.93533C13.3159 1.60324 12.8655 1.41667 12.3958 1.41667Z" />
         </symbol>
     
         <symbol id="amper" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21.0527 17.3601L18.6047 19.0161L15.8447 15.4641C14.0527 16.7441 11.8687 17.3841 9.29267 17.3841C6.76467 17.3841 4.74067 16.8241 3.22067 15.7041C1.70067 14.5681 0.940674 12.9841 0.940674 10.9521C0.940674 9.36808 1.41267 8.14408 2.35667 7.28008C3.31667 6.40008 4.44467 5.96008 5.74067 5.96008C6.98867 5.96008 8.02067 6.41608 8.83667 7.32808V6.53608L4.92467 1.54408L4.90067 0.0800781H17.8127V2.76808H9.14867L15.9647 11.1201C16.8447 9.58408 17.2847 7.68808 17.2847 5.43208H20.3567C20.3567 8.68008 19.5407 11.3681 17.9087 13.4961L21.0527 17.3601ZM9.29267 14.6961C11.2127 14.6961 12.8127 14.2161 14.0927 13.2561L11.9087 10.4481C11.2047 9.53608 10.5087 8.88808 9.82067 8.50408C9.14867 8.12008 8.36467 7.92808 7.46867 7.92808C6.46067 7.92808 5.63667 8.20808 4.99667 8.76808C4.35667 9.31208 4.03667 10.0721 4.03667 11.0481C4.03667 12.2321 4.49267 13.1361 5.40467 13.7601C6.31667 14.3841 7.61267 14.6961 9.29267 14.6961Z" fill="#EA4256"/>
         </symbol>
-        <symbol id="ziga" viewBox="0 0 261 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="ziga" preserveAspectRatio="none" viewBox="0 0 261 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2.37793 2.12186C24.015 2.12186 45.652 2.12186 67.2891 2.12186C90.4702 2.12186 113.657 1.94589 136.832 2.57305C158.257 3.15282 179.665 4.08274 201.097 4.39285C216.182 4.61111 231.267 4.40985 246.351 4.58836C249.849 4.62975 253.329 4.76212 256.819 4.97939C257.426 5.01721 259.242 5.04662 258.639 5.12979C254.432 5.70998 250.278 6.52331 246.05 6.99471C232.027 8.55831 217.882 9.12338 203.804 9.9876C169.787 12.0759 135.776 14.2486 101.76 16.3494C97.1437 16.6345 92.5307 16.8501 87.9085 16.9961C87.1314 17.0206 86.3541 17.0381 85.5773 17.0713C85.044 17.0941 83.9242 16.6912 83.9831 17.2217C84.0173 17.5293 92.5661 17.7952 93.0971 17.8233C111.459 18.7925 129.938 18.1528 148.263 19.7183C149.238 19.8016 154.506 19.654 155.271 20.8011C155.467 21.0952 154.146 21.5413 153.978 21.6133" stroke="#EA4256" stroke-width="4" stroke-linecap="round"/>
         </symbol>
         <symbol id="stroke" viewBox="0 0 253 67" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1803,7 +1875,18 @@
         <symbol id="coins" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.625 0C15.3675 0 11.25 2.47125 11.25 5.625V8.85875C10.6462 8.7875 10.0188 8.75 9.375 8.75C4.1175 8.75 0 11.2212 0 14.375V24.375C0 27.5287 4.1175 30 9.375 30C13.6337 30 17.145 28.3787 18.325 26.0863C19.0725 26.195 19.8425 26.25 20.625 26.25C25.8825 26.25 30 23.7787 30 20.625V5.625C30 2.47125 25.8825 0 20.625 0ZM27.5 15.625C27.5 17.1 24.56 18.75 20.625 18.75C19.985 18.75 19.3575 18.7063 18.75 18.6213V16.1413C19.3625 16.2125 19.99 16.25 20.625 16.25C23.3675 16.25 25.8 15.5775 27.5 14.4862V15.625ZM2.5 18.2362C4.2 19.3275 6.6325 20 9.375 20C12.1175 20 14.55 19.3275 16.25 18.2362V19.375C16.25 20.85 13.31 22.5 9.375 22.5C5.44 22.5 2.5 20.85 2.5 19.375V18.2362ZM27.5 10.625C27.5 12.1 24.56 13.75 20.625 13.75C19.9562 13.75 19.3 13.7025 18.6675 13.61C18.4263 12.5012 17.6675 11.505 16.535 10.7062C17.765 11.0562 19.15 11.25 20.625 11.25C23.3675 11.25 25.8 10.5775 27.5 9.48625V10.625ZM20.625 2.5C24.56 2.5 27.5 4.15 27.5 5.625C27.5 7.1 24.56 8.75 20.625 8.75C16.69 8.75 13.75 7.1 13.75 5.625C13.75 4.15 16.69 2.5 20.625 2.5ZM9.375 11.25C13.31 11.25 16.25 12.9 16.25 14.375C16.25 15.85 13.31 17.5 9.375 17.5C5.44 17.5 2.5 15.85 2.5 14.375C2.5 12.9 5.44 11.25 9.375 11.25ZM9.375 27.5C5.44 27.5 2.5 25.85 2.5 24.375V23.2363C4.2 24.3275 6.6325 25 9.375 25C12.1175 25 14.55 24.3275 16.25 23.2363V24.375C16.25 25.85 13.31 27.5 9.375 27.5ZM20.625 23.75C19.985 23.75 19.3575 23.7062 18.75 23.6213V21.1413C19.3625 21.2125 19.99 21.25 20.625 21.25C23.3675 21.25 25.8 20.5775 27.5 19.4862V20.625C27.5 22.1 24.56 23.75 20.625 23.75Z" />
         </symbol>
+        <symbol id="account" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23 11H21V9C21 8.73479 20.8946 8.48043 20.7071 8.2929C20.5196 8.10536 20.2652 8 20 8C19.7348 8 19.4804 8.10536 19.2929 8.2929C19.1054 8.48043 19 8.73479 19 9V11H17C16.7348 11 16.4804 11.1054 16.2929 11.2929C16.1054 11.4804 16 11.7348 16 12C16 12.2652 16.1054 12.5196 16.2929 12.7071C16.4804 12.8946 16.7348 13 17 13H19V15C19 15.2652 19.1054 15.5196 19.2929 15.7071C19.4804 15.8946 19.7348 16 20 16C20.2652 16 20.5196 15.8946 20.7071 15.7071C20.8946 15.5196 21 15.2652 21 15V13H23C23.2652 13 23.5196 12.8946 23.7071 12.7071C23.8946 12.5196 24 12.2652 24 12C24 11.7348 23.8946 11.4804 23.7071 11.2929C23.5196 11.1054 23.2652 11 23 11Z" />
+            <path d="M9 12C10.1867 12 11.3467 11.6481 12.3334 10.9888C13.3201 10.3295 14.0892 9.39246 14.5433 8.2961C14.9974 7.19975 15.1162 5.99335 14.8847 4.82946C14.6532 3.66558 14.0818 2.59648 13.2426 1.75736C12.4035 0.918247 11.3344 0.346802 10.1705 0.115291C9.00666 -0.11622 7.80026 0.00259972 6.7039 0.456726C5.60754 0.910851 4.67047 1.67989 4.01118 2.66658C3.35189 3.65328 3 4.81331 3 6C3.00159 7.59081 3.63424 9.11602 4.75911 10.2409C5.88399 11.3658 7.40919 11.9984 9 12ZM9 2C9.79113 2 10.5645 2.2346 11.2223 2.67412C11.8801 3.11365 12.3928 3.73836 12.6955 4.46927C12.9983 5.20017 13.0775 6.00444 12.9231 6.78036C12.7688 7.55629 12.3878 8.26902 11.8284 8.82843C11.269 9.38784 10.5563 9.7688 9.78036 9.92314C9.00444 10.0775 8.20017 9.99827 7.46927 9.69552C6.73836 9.39277 6.11365 8.88008 5.67412 8.22228C5.2346 7.56449 5 6.79113 5 6C5 4.93914 5.42143 3.92172 6.17157 3.17158C6.92172 2.42143 7.93913 2 9 2Z" />
+            <path d="M9 14C6.61386 14.0026 4.32622 14.9517 2.63896 16.639C0.951708 18.3262 0.00264685 20.6139 0 23C0 23.2652 0.105357 23.5196 0.292893 23.7071C0.48043 23.8946 0.734784 24 1 24C1.26522 24 1.51957 23.8946 1.70711 23.7071C1.89464 23.5196 2 23.2652 2 23C2 21.1435 2.7375 19.363 4.05025 18.0503C5.36301 16.7375 7.14348 16 9 16C10.8565 16 12.637 16.7375 13.9497 18.0503C15.2625 19.363 16 21.1435 16 23C16 23.2652 16.1054 23.5196 16.2929 23.7071C16.4804 23.8946 16.7348 24 17 24C17.2652 24 17.5196 23.8946 17.7071 23.7071C17.8946 23.5196 18 23.2652 18 23C17.9974 20.6139 17.0483 18.3262 15.361 16.639C13.6738 14.9517 11.3861 14.0026 9 14Z" />
+        </symbol>
     
+        <symbol id="arrow-left" viewBox="0 0 14 25" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.7604 25L1.91822 15.0833C1.24102 14.3987 0.86084 13.4721 0.86084 12.5062C0.86084 11.5403 1.24102 10.6138 1.91822 9.92917L11.7718 0L13.9645 2.20937L4.11089 12.1375C4.01385 12.2352 3.95933 12.3676 3.95933 12.5057C3.95933 12.6438 4.01385 12.7763 4.11089 12.874L13.952 22.7906L11.7604 25Z" />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 14 25" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.2396 25L12.0818 15.0833C12.759 14.3987 13.1392 13.4721 13.1392 12.5062C13.1392 11.5403 12.759 10.6138 12.0818 9.92917L2.22821 0L0.0355387 2.20937L9.88911 12.1375C9.98615 12.2352 10.0407 12.3676 10.0407 12.5057C10.0407 12.6438 9.98615 12.7763 9.88911 12.874L0.0479612 22.7906L2.2396 25Z" />
+        </symbol>
     
     
     

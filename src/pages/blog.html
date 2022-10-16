@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="col-xl-5 col-md-3 offer__pictures-wrapper">
-                    <img class="offer-phone" src="{{root}}assets/img/phone.png" alt="phone">
+                    <img class="offer-phone" src="{{root}}assets/img/phone-blog.png" alt="phone">
                 </div>
             </div>
             <svg class="offer__app" width="547" preserveAspectRatio="none" height="102" viewBox="0 0 547 102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@
                 <div class="offer-info__title section__subsubtitle">Прямо сейчас доступно:</div>
                 <div class="offer-info__content">
                     <div class="offer-info__item">
-                        <span class="t-bold">200 заведений</span><br>
+                        <span class="t-bold">200&nbsp;заведений</span><br>
                         на твой выбор
                     </div>
                     <div class="offer-info__divider">
@@ -37,15 +37,21 @@
                         </svg>
                     </div>
                     <div class="offer-info__item">
-                        Услуги на общую <br>
-                        сумму <span class="t-bold">476 800 ₽</span>
+                        Услуги&nbsp;на&nbsp;общую <br>
+                        сумму&nbsp;<span class="t-bold">476&nbsp;800&nbsp;₽</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <button class="float-button">
+        <svg width="24" height="24">
+            <use xlink:href="#account"></use>
+        </svg>
+        <span>Создать аккаунт</span>
+    </button>
 </section>
-<section class="bliss section--inner">
+<section class="bliss section--inner" id="bliss">
     <div class="container">
         <div class="bliss__title section__title-h1">
             <div class="mb-4 mb-sm-5">
@@ -116,7 +122,7 @@
         </div>
     </div>
 </section>
-<section class="about section--inner">
+<section class="about section--inner" id="about">
     <div class="container">
         <div class="section__title-h1">
             <div class="mb-3 mb-xl-4">Уже 1538 блогеров <br> <span class="section-decor"><span>присоединились</span></span> к нам</div>
@@ -134,7 +140,7 @@
                             <use xlink:href="#comment"></use>
                         </svg>
                     </div>
-                    <div class="about-left__in d-flex flex-column justify-content-between h-100">
+                    <div class="about-left__in d-flex flex-column justify-content-between">
                         <div>
                             <div class="section__title-h2 mb-3 mb-md-3 tal">Блогеры о нас</div>
                             <div class="about-photos mb-4 mb-md-4">
@@ -146,7 +152,7 @@
                                 <div class="text-lgray ml-2 t-regular">и&nbsp;др.</div>
                             </div>
                         </div>
-                        <a href="#" class="button button--secondary">Смотреть видео отзывы</a>
+                        <button data-fancybox data-src="#popup-review" class="button button--secondary">Смотреть видео отзывы</button>
                     </div>
                 </div>
                 <div class="about-reviews">
@@ -590,7 +596,7 @@
         Количество заведений ежедневно растет, а бизнес <span>принимает блогера без отказа</span>
     </div>
 </section>
-<section class="section--inner act">
+<section class="section--inner act" id="act">
     <div class="container">
         <div class="section__title-h1">
             <div class="mb-3 mb-xl-4"><span class="section-decor"><span>Продавать не нужно,</span></span> просто <br> показывай как пользуешься услугой</div>
@@ -599,7 +605,7 @@
         <!--desktop -->
         <div class="act-layout">
             <div class="d-flex flex-column card-column">
-                <div class="card js-act-card card--active" data-picture="{{root}}assets/img/act-1.png">
+                <div class="card js-act-card card--active" data-picture="{{root}}assets/img/act-1.jpg">
                     <div class="card-in">
                         <div class="card-top">
                             <svg class="card-icon" width="25" height="22">
@@ -610,7 +616,7 @@
                         <div class="card-info">Показывай заведение, интерьер и общую атмосферу</div>
                     </div>
                 </div>
-                <div class="card js-act-card" data-picture="{{root}}assets/img/act-2.png">
+                <div class="card js-act-card" data-picture="{{root}}assets/img/act-2.jpg">
                     <div class="card-in">
                         <div class="card-top">
                             <svg class="card-icon" width="23" height="25" >
@@ -621,7 +627,7 @@
                         <div class="card-info">Демонстрируй товар, блюда или процесс работы мастера</div>
                     </div>
                 </div>
-                <div class="card js-act-card" data-picture="{{root}}assets/img/act-3.png">
+                <div class="card js-act-card" data-picture="{{root}}assets/img/act-3.jpg">
                     <div class="card-in">
                         <div class="card-top">
                             <svg class="card-icon" width="25" height="25">
@@ -634,10 +640,10 @@
                 </div>
             </div>
             <div class="act-phone">
-                <img class="act-phone__picture js-act-picture" src="{{root}}assets/img/act-1.png" alt="Action picture">
+                <img class="act-phone__picture js-act-picture" src="{{root}}assets/img/act-1.jpg" alt="Action picture">
             </div>
             <div class="d-flex flex-column card-column">
-                <div class="card js-act-card" data-picture="{{root}}assets/img/act-4.png">
+                <div class="card js-act-card" data-picture="{{root}}assets/img/act-4.jpg">
                     <div class="card-in">
                         <div class="card-top">
                             <svg class="card-icon" width="25" height="26">
@@ -648,7 +654,7 @@
                         <div class="card-info">Дари подписчикам приятные бонусы за счет заведения</div>
                     </div>
                 </div>
-                <div class="card js-act-card" data-picture="{{root}}assets/img/act-5.png">
+                <div class="card js-act-card" data-picture="{{root}}assets/img/act-5.jpg">
                     <div class="card-in">
                         <div class="card-top">
                             <svg class="card-icon" width="25" height="25" >
@@ -669,27 +675,27 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="act-slider__top-item">
-                                <img src="{{root}}assets/img/act-1.png" alt="Action picture">
+                                <img src="{{root}}assets/img/act-1.jpg" alt="Action picture">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="act-slider__top-item">
-                                <img src="{{root}}assets/img/act-2.png" alt="Action picture">
+                                <img src="{{root}}assets/img/act-2.jpg" alt="Action picture">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="act-slider__top-item">
-                                <img src="{{root}}assets/img/act-3.png" alt="Action picture">
+                                <img src="{{root}}assets/img/act-3.jpg" alt="Action picture">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="act-slider__top-item">
-                                <img src="{{root}}assets/img/act-4.png" alt="Action picture">
+                                <img src="{{root}}assets/img/act-4.jpg" alt="Action picture">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="act-slider__top-item">
-                                <img src="{{root}}assets/img/act-5.png" alt="Action picture">
+                                <img src="{{root}}assets/img/act-5.jpg" alt="Action picture">
                             </div>
                         </div>
                     </div>
@@ -805,7 +811,7 @@
         </div>
     </div>
 </div>
-<section class="how-section section--inner">
+<section class="how-section section--inner" id="how">
     <div class="container">
         <div class="section__title-h1">
             Посмотри, <span class="section-decor"><span>как просто</span></span> <br> пользоваться платформой
@@ -904,7 +910,7 @@
                 <div class="card-in">
                     <div class="card-top">
                         <svg class="card-icon" width="25" height="23">
-                            <use xlink:href="#favorites"></use>
+                            <use xlink:href="#house"></use>
                         </svg>
                         <div class="card-title">Карточка заведения</div>
                     </div>
@@ -980,9 +986,10 @@
         </div>
     </div>
 </section>
-<section class="ind use section--inner" id="use">
+<section class="ind use section--inner blog-ind" id="use">
     <div class="container">
-        <div class="ind__title section__title-h1">Присоединяйся к BARTER MAP <br> и пользуйся <span><svg><use xlink:href="#outline"></use></svg>бесплатно</span>
+        <div class="ind__title blog-ind__title section__title-h1">
+            Присоединяйся к BARTER MAP <br> и пользуйся <span><svg preserveAspectRatio="none"><use xlink:href="#ziga"></use></svg>бесплатно</span>
         </div>
 
         <div class="ind-slider-wrapper js-ind-slider">
@@ -1179,98 +1186,85 @@
         </div>
     </div>
 </section>
-<section class="section--inner" id="questions">
-    <div class="container">
-        <div class="section__title-h1"><span class="section-decor"><span>Частые вопросы</span></span></div>
-        <div class="question-list">
-            <div class="question">
-                <div class="question__top js-toggle-question">
-                    <div class="question__title">Сколько времени нужно тратить на сервис?</div>
-                    <svg width="22" height="22">
-                        <use xlink:href="#cross-thin"></use>
-                    </svg>
-                </div>
-                <div class="question__bottom">
-                    <div class="question__bottom-in">
-                        <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
 
-                        <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                            еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-
-                        <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+<div class="popup-review" id="popup-review" style="display: none">
+    <div class="popup-review__wrapper">
+        <div class="popup-review__content">
+            <div class="popup-review__slider js-popup-rev-slider">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="popup-review__item">
+                            <div class="popup-review__info">
+                                <span class="popup-review__photo" style="background-image: url({{root}}assets/img/int-4.jpg);"></span>
+                                <span>@nickname</span>
+                                <button class="popup-review__button js-close-popup-review">
+                                    <svg width="15" height="15">
+                                        <use xlink:href="#cross-thin"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <img src="{{root}}assets/img/act-1.jpg" alt="">
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="question__top js-toggle-question">
-                    <div class="question__title">Сколько стоит размещение?</div>
-                    <svg width="22" height="22">
-                        <use xlink:href="#cross-thin"></use>
-                    </svg>
-                </div>
-                <div class="question__bottom">
-                    <div class="question__bottom-in">
-                        <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
-
-                        <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                            еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-
-                        <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                    <div class="swiper-slide">
+                        <div class="popup-review__item">
+                            <div class="popup-review__info">
+                                <span class="popup-review__photo" style="background-image: url({{root}}assets/img/int-4.jpg);"></span>
+                                <span>@nickname</span>
+                                <button class="popup-review__button js-close-popup-review">
+                                    <svg width="15" height="15">
+                                        <use xlink:href="#cross-thin"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <img src="{{root}}assets/img/act-2.jpg" alt="">
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="question__top js-toggle-question">
-                    <div class="question__title">Можно ли выбирать блогеров самостоятельно?</div>
-                    <svg width="22" height="22">
-                        <use xlink:href="#cross-thin"></use>
-                    </svg>
-                </div>
-                <div class="question__bottom">
-                    <div class="question__bottom-in">
-                        <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
-
-                        <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                            еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-
-                        <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
+                    <div class="swiper-slide">
+                        <div class="popup-review__item">
+                            <div class="popup-review__info">
+                                <span class="popup-review__photo" style="background-image: url({{root}}assets/img/int-4.jpg);"></span>
+                                <span>@nickname</span>
+                                <button class="popup-review__button js-close-popup-review">
+                                    <svg width="15" height="15">
+                                        <use xlink:href="#cross-thin"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <img src="{{root}}assets/img/act-3.jpg" alt="">
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="question__top js-toggle-question">
-                    <div class="question__title">Какой депозит устанавливать для блогеров?</div>
-                    <svg width="22" height="22">
-                        <use xlink:href="#cross-thin"></use>
-                    </svg>
-                </div>
-                <div class="question__bottom">
-                    <div class="question__bottom-in">
-                        <p>От 5 до 20 минут, чтобы настроить карточку заведения, после чего блогеры всё сделают сами</p>
-
-                        <p>Если ваше заведение работает с блогерами только по предварительному бронированию, тогда
-                            еще нужно подтверждать бронирование от блогеров, уведомления о которых приходит в Телеграм-бот</p>
-
-                        <p>А дальше по желанию можете наблюдать за результатами в разделе статистики</p>
-                    </div>
-                </div>
-            </div>
-            <div class="question">
-                <div class="question__top js-toggle-question">
-                    <div class="question__title">На чем зарабатывает платформа?</div>
-                    <svg width="22" height="22">
-                        <use xlink:href="#cross-thin"></use>
-                    </svg>
-                </div>
-                <div class="question__bottom">
-                    <div class="question__bottom-in">
-                        <p>Платформа взымает комиссию за каждый визит блогера.</p>
-
-                        <p>Комиссия зависит от эффективности рекламы, а точнее от того количества людей, которое узнало
-                            о ресторане из рекламы блогера</p>
+                    <div class="swiper-slide">
+                        <div class="popup-review__item">
+                            <div class="popup-review__info">
+                                <span class="popup-review__photo" style="background-image: url({{root}}assets/img/int-4.jpg);"></span>
+                                <span>@nickname</span>
+                                <button class="popup-review__button js-close-popup-review">
+                                    <svg width="15" height="15">
+                                        <use xlink:href="#cross-thin"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <img src="{{root}}assets/img/act-4.jpg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="popup-review__nav">
+            <button class="popup-review__nav-item js-popup-rev-prev">
+                <svg width="14" height="25">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </button>
+            <button class="popup-review__nav-item js-popup-rev-next">
+                <svg width="14" height="25">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </button>
+        </div>
     </div>
-</section>
+</div>
+
+{{> questions}}

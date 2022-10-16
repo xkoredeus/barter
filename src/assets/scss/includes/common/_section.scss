@@ -48,8 +48,8 @@
   }
 
   &__subsubtitle {
+    font-family: $t-Medium;
     color: #9C9C9C;
-
     @include title-h3;
   }
 }

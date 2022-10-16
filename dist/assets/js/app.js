@@ -67,7 +67,7 @@ $(() => {
             el: ".swiper-scrollbar",
             hide: false,
         },
-        mousewheel: true,
+        // mousewheel: true,
         breakpoints: {
             0: {
                 slidesPerView: 1,
@@ -230,7 +230,6 @@ $(() => {
     }
 
     const aboutReviews = new Swiper(".js-about-rev-slider", {
-        speed: 1500,
         freeMode: false,
         allowTouchMove: false,
         navigation: {
@@ -238,6 +237,7 @@ $(() => {
             prevEl: ".js-about-rev-prev",
         },
         slidesPerView: 1,
+        speed: 1500,
         effect: 'fade',
         fadeEffect: {
             crossFade: true
@@ -274,7 +274,7 @@ $(() => {
             el: ".swiper-scrollbar",
             hide: false,
         },
-        mousewheel: true,
+        // mousewheel: true,
         breakpoints: {
             0: {
                 slidesPerView: 1,
@@ -306,7 +306,7 @@ $(() => {
                 el: ".swiper-scrollbar",
                 hide: false,
             },
-            mousewheel: true,
+            // mousewheel: true,
             breakpoints: {
                 0: {
                     slidesPerView: 1,
@@ -332,6 +332,14 @@ $(() => {
         });
     }
 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 5){
+            $('.float-button').addClass('float-button-floating');
+        } else {
+            $('.float-button').removeClass('float-button-floating');
+        }
+    });
+
 
     if ( $(window).width() > 768 ) {
         $('.js-act-card').hover(function () {
@@ -343,7 +351,37 @@ $(() => {
                 $('.js-act-picture').attr('src', $(this).data('picture'));
             }
         });
-    }
+    };
+    $('[data-fancybox]').fancybox({
+        animationDuration: 600,
+        animationEffect: 'slide-in-in',
+        touch: false,
+    });
+
+
+    const popupReviews = new Swiper(".js-popup-rev-slider", {
+        freeMode: false,
+        // allowTouchMove: false,
+        navigation: {
+            nextEl: ".js-popup-rev-next",
+            prevEl: ".js-popup-rev-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 15,
+        speed: 1500,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });
+
+    $('.js-close-popup-review').on('click', function () {
+        $.fancybox.close();
+    })
 });
 
 if ( $(window).width() < 768 ) {
