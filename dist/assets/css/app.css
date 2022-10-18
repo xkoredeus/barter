@@ -8181,6 +8181,15 @@ html.fixed, body.fixed {
   position: relative;
   background-image: url("../img/offer-blog.jpg");
   z-index: 1;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .offer--blog .offer-wrapper {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 
 .offer--blog .offer-wrapper::before {
@@ -8283,10 +8292,12 @@ html.fixed, body.fixed {
   border-radius: 50%;
   padding: 15px;
   gap: 10px;
-  right: 40px;
+  right: 50%;
   bottom: 50%;
   -webkit-transition: .7s all ease;
   transition: .7s all ease;
+  -webkit-transform: translateX(651px);
+          transform: translateX(651px);
 }
 
 .float-button-floating {
@@ -8296,6 +8307,14 @@ html.fixed, body.fixed {
 @media only screen and (max-width: 768px) {
   .float-button-floating {
     bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 1386px) {
+  .float-button {
+    right: 40px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -8620,10 +8639,22 @@ html.fixed, body.fixed {
           align-items: center;
   gap: 22px;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 36px 42px -17px rgba(170, 170, 170, 0.3);
-          box-shadow: 0px 36px 42px -17px rgba(170, 170, 170, 0.3);
+  -webkit-box-shadow: 0 36px 42px -17px rgba(170, 170, 170, 0.3);
+          box-shadow: 0 36px 42px -17px rgba(170, 170, 170, 0.3);
   -webkit-transform: translateY(-60px);
           transform: translateY(-60px);
+}
+
+.bliss-item__icons img {
+  max-width: 51px;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .bliss-item__icons img {
+    max-width: 43px;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -8836,6 +8867,12 @@ html.fixed, body.fixed {
   top: 0;
 }
 
+.about-reviews__item-link svg {
+  fill: #fff;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
 @media only screen and (max-width: 1200px) {
   .about-reviews__item-link {
     width: 50px;
@@ -8858,21 +8895,19 @@ html.fixed, body.fixed {
   }
 }
 
-.about-reviews__item-link:hover img {
-  opacity: .8;
+.about-reviews__item-link:hover svg {
+  fill: #EA4256;
 }
 
-.about-reviews__item-link img {
+.about-reviews__item-link svg {
   width: 46px;
   height: 46px;
-  -o-object-fit: contain;
-     object-fit: contain;
   -webkit-transition: .5s all ease;
   transition: .5s all ease;
 }
 
 @media only screen and (max-width: 1200px) {
-  .about-reviews__item-link img {
+  .about-reviews__item-link svg {
     width: 22px;
     height: 22px;
   }
@@ -10196,12 +10231,25 @@ html.fixed, body.fixed {
   margin-right: 30px;
 }
 
+@media only screen and (max-width: 576px) {
+  .popup-review__wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .popup-review__content {
   padding: 15px;
   background-color: #fff;
   border-radius: 30px;
   max-width: 310px;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 576px) {
+  .popup-review__content {
+    max-width: unset;
+  }
 }
 
 .popup-review__item {
@@ -10219,6 +10267,13 @@ html.fixed, body.fixed {
   left: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#333333), to(transparent));
   background: linear-gradient(180deg, #333333 0%, transparent 100%);
+}
+
+@media only screen and (max-width: 576px) {
+  .popup-review__item img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .popup-review__info {
@@ -10281,8 +10336,22 @@ html.fixed, body.fixed {
   left: -25px;
 }
 
+@media only screen and (max-width: 576px) {
+  .popup-review__nav-item:first-child {
+    left: 35px;
+    z-index: 1;
+  }
+}
+
 .popup-review__nav-item:last-child {
   right: -25px;
+}
+
+@media only screen and (max-width: 576px) {
+  .popup-review__nav-item:last-child {
+    right: 35px;
+    z-index: 1;
+  }
 }
 
 .popup-review .swiper-pagination {
@@ -10307,6 +10376,14 @@ html.fixed, body.fixed {
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+}
+
+@media only screen and (max-width: 576px) {
+  .popup-review .swiper-pagination-bullet {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .popup-review .swiper-pagination-bullet-active {
