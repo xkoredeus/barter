@@ -99,6 +99,7 @@
   bottom: 50%;
   @include ease-long;
   transform: translateX(651px);
+  z-index: 2;
 
   &-floating {
     bottom: 40px;

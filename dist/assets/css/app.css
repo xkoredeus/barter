@@ -8298,6 +8298,7 @@ html.fixed, body.fixed {
   transition: .7s all ease;
   -webkit-transform: translateX(651px);
           transform: translateX(651px);
+  z-index: 2;
 }
 
 .float-button-floating {
