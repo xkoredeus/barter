@@ -28,7 +28,10 @@ html, body {
 
   &.fixed {
     overflow: hidden;
-    padding-right: 15px;
+
+    @include rmin(1200) {
+      padding-right: 15px;
+    }
   }
 }
 
